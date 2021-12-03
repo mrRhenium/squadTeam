@@ -1,0 +1,108 @@
+.body {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 85%;
+  border: 1px solid red;
+}
+.headingBody {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 15%;
+  border: 1px solid red;
+}
+.body a {
+  color: white;
+  font-size: 3rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: bolder;
+}
+.contentBody {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 85%;
+  border: 2px solid white;
+}
+form {
+  width: 100%;
+  height: 100%;
+}
+.formElement {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 33.34%;
+  border: 1px solid white;
+}
+.formElementHeading {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50%;
+  border: 1px solid white;
+}
+.formElementHeading a {
+  color: white;
+  font-size: 1.2rem;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.formElementBody {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 50%;
+  border: 1px solid white;
+}
+.formBodyInput {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  border: 1px solid white;
+}
+.formBodyInput input {
+  width: 50%;
+  height: 50%;
+  border: 1px solid red;
+  text-align: center;
+}
+.formBodyBtn {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  border: 1px solid white;
+}
+.formBodyBtn .saveBtn {
+  color: blue;
+  width: 5rem;
+  height: 1.5rem;
+}
+.formElement .nextBtn {
+  color: #09aeff;
+  font-size: 2rem;
+  text-decoration: none;
+}
+.formElement .nextBtn:hover {
+  color: #0fffff;
+  font-size: 2.2rem;
+}

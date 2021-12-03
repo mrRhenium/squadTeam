@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Squad Making website</title>
+    <link rel="stylesheet" href="Files/index.css" />
+    <link rel="stylesheet" href="Files/header.css" />
+    <link rel="stylesheet" href="Files/body.css" />
+    <link rel="stylesheet" href="Files/footer.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="mobileCover">
+        <!-- Header part start -->
+        <header class="header"></header>
+        <!-- Header part over -->
+
+        <!-- boby part start -->
+        <div class="body">
+          <div class="headingBody">
+            <a>TEAM SQUAD</a>
+          </div>
+          <div class="contentBody">
+            <form>
+              <div class="formElement">
+                <div class="formElementHeading">
+                  <a>Total No. of Players</a>
+                </div>
+                <div class="formElementBody">
+                  <div class="formBodyInput">
+                    <input
+                      id="totalTeam"
+                      type="number"
+                      placeholder="Total"
+                      min="3"
+                      value="0"
+                    />
+                  </div>
+                  <div class="formBodyBtn">
+                    <button class="saveBtn">Save</button>
+                  </div>
+                </div>
+              </div>
+              <div class="formElement">
+                <div class="formElementHeading"><a>Add Players</a></div>
+                <div class="formElementBody">
+                  <div class="formBodyInput">
+                    <input
+                      type="text"
+                      id="playerName"
+                      placeholder="player Name"
+                      style="width: 80%"
+                    />
+                  </div>
+                  <div class="formBodyBtn">
+                    <button class="addBtn">Add +</button>
+                  </div>
+                </div>
+              </div>
+              <div class="formElement">
+                <a class="nextBtn" href="Files/squad.html">Next</a>
+              </div>
+            </form>
+          </div>
+        </div>
+        <!-- boby part over -->
+
+        <!-- footer part start -->
+        <footer class="footer"></footer>
+        <!-- footer part over -->
+      </div>
+    </div>
+    <script src="Files/index.js"></script>
+  </body>
+</html>
