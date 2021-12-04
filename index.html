@@ -26,25 +26,38 @@
             <form>
               <div class="formElement">
                 <div class="formElementHeading">
-                  <a>Total No. of Players</a>
+                  <a id="totalPlayer">Total No. of Players</a>
                 </div>
                 <div class="formElementBody">
                   <div class="formBodyInput">
-                    <input
-                      id="totalTeam"
-                      type="number"
-                      placeholder="Total"
-                      min="3"
-                      value="0"
-                    />
+                    <input id="totalTeam" type="number" min="3" value="0" />
                   </div>
                   <div class="formBodyBtn">
                     <button class="saveBtn">Save</button>
                   </div>
                 </div>
               </div>
+
+              <!-- Game Points field -->
               <div class="formElement">
-                <div class="formElementHeading"><a>Add Players</a></div>
+                <div class="formElementHeading">
+                  <a id="gamePoint">Game Points</a>
+                </div>
+                <div class="formElementBody">
+                  <div class="formBodyInput">
+                    <input id="points" type="number" min="3" value="0" />
+                  </div>
+                  <div class="formBodyBtn">
+                    <button class="gamePointBtn">Save</button>
+                  </div>
+                </div>
+              </div>
+              <!-- game Points field-over -->
+
+              <div class="formElement">
+                <div class="formElementHeading">
+                  <a id="addPlayer">Add Players</a>
+                </div>
                 <div class="formElementBody">
                   <div class="formBodyInput">
                     <input
@@ -60,7 +73,7 @@
                 </div>
               </div>
               <div class="formElement">
-                <a class="nextBtn" href="Files/squad.html">Next</a>
+                <a class="nextBtn">Next</a>
               </div>
             </form>
           </div>
@@ -72,6 +85,6 @@
         <!-- footer part over -->
       </div>
     </div>
-    <script src="Files/index.js"></script>
+    <script src="Files/index.mjs" type="module"></script>
   </body>
 </html>

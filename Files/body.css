@@ -42,7 +42,7 @@ form {
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
-  height: 33.34%;
+  height: 25%;
   border: 1px solid white;
 }
 .formElementHeading {
@@ -92,10 +92,19 @@ form {
   height: 100%;
   border: 1px solid white;
 }
-.formBodyBtn .saveBtn {
-  color: blue;
+.formBodyBtn .saveBtn,
+.formBodyBtn .addBtn,
+.formBodyBtn .gamePointBtn {
+  color: white;
   width: 5rem;
   height: 1.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  background-color: darkcyan;
+}
+.formBodyBtn .saveBtn:hover,
+.formBodyBtn .addBtn:hover {
+  transform: scale(0.9);
 }
 .formElement .nextBtn {
   color: #09aeff;
@@ -105,4 +114,5 @@ form {
 .formElement .nextBtn:hover {
   color: #0fffff;
   font-size: 2.2rem;
+  cursor: pointer;
 }
