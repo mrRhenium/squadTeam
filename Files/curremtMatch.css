@@ -1,3 +1,41 @@
+.body {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 85%;
+  border: 0px solid red;
+}
+.matchHeading {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 10%;
+  border: 0px solid red;
+}
+.matchHeading a {
+  color: white;
+  margin-top: 1rem;
+  font-size: 2.5rem;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.matchContentPart2 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 90%;
+  border: 0px solid red;
+}
 .currentMatch {
   position: relative;
   display: flex;
@@ -8,6 +46,7 @@
   width: 90%;
   height: 70%;
   border: 1px solid red;
+  border-radius: 40px;
 }
 
 .currentMatchHeading {
@@ -19,7 +58,7 @@
   flex-wrap: wrap;
   width: 100%;
   height: 30%;
-  border: 1px solid red;
+  border: 0px solid red;
 }
 .currentMatchName {
   position: relative;
@@ -32,7 +71,8 @@
 }
 .currentMatchName a {
   color: white;
-  font-size: 2rem;
+  margin-top: 0.5rem;
+  font-size: 1.8rem;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 .currentMatchTime {
@@ -47,6 +87,7 @@
 }
 .currentMatchTime a {
   color: white;
+  margin-top: 0.5rem;
   font-size: 1.5rem;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
@@ -57,7 +98,7 @@
   align-items: center;
   width: 100%;
   height: 70%;
-  border: 1px solid red;
+  border: 0px solid red;
 }
 form {
   width: 100%;
@@ -74,7 +115,8 @@ form {
 }
 .winnerCover label {
   color: white;
-  font-size: 1.5rem;
+  margin-top: -0.5rem;
+  font-size: 1.7rem;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 .playerNameCover {
@@ -86,16 +128,19 @@ form {
   flex-wrap: wrap;
   width: 100%;
   height: 40%;
-  border: 1px solid red;
+  border: 0px solid red;
 }
 .playerA {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  margin-bottom: 0.5rem;
+  padding: 1rem;
+  width: 90%;
   height: 50%;
-  border: 1px solid red;
+  border: 1px solid white;
+  border-radius: 50px;
 }
 
 .playerB {
@@ -103,9 +148,11 @@ form {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  padding: 1rem;
+  width: 90%;
   height: 50%;
-  border: 1px solid red;
+  border: 1px solid white;
+  border-radius: 50px;
 }
 .playerwinnerName {
   position: relative;
@@ -114,7 +161,7 @@ form {
   align-items: center;
   width: 60%;
   height: 100%;
-  border: 1px solid red;
+  border: 0px solid red;
 }
 .playerwinnerName {
   color: white;
@@ -127,10 +174,10 @@ form {
   align-items: center;
   width: 40%;
   height: 100%;
-  border: 1px solid red;
+  border: 0px solid red;
 }
 .playerInput input {
-  width: 4rem;
+  width: 3.5rem;
   height: 1.7rem;
   text-align: center;
 }
@@ -141,5 +188,19 @@ form {
   align-items: center;
   width: 100%;
   height: 40%;
-  border: 1px solid red;
+  border: 0px solid red;
+}
+.submitBtn a {
+  color: black;
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  padding: 0.1rem 1rem;
+  text-decoration: none;
+  border: 2px solid #09aeff;
+  border-radius: 20px;
+  cursor: pointer;
+  background-color: darkcyan;
+}
+.submitBtn a:hover {
+  font-size: 1rem;
 }

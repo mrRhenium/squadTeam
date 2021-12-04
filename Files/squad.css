@@ -20,7 +20,7 @@
 }
 .matchHeading a {
   color: white;
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
@@ -31,27 +31,9 @@
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
-  height: 90%;
+  height: 80%;
   border: 1px solid red;
   overflow-y: scroll;
-}
-.matchUI {
-  display: none;
-  /* background-color: violet; */
-}
-.matchContentPart2 {
-  position: relative;
-  display: none;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 100%;
-  height: 90%;
-  border: 1px solid red;
-}
-.matchStartUI {
-  display: flex;
 }
 .matchContent::-webkit-scrollbar {
   width: 10px;
@@ -75,15 +57,39 @@
   background-color: black;
   width: 10px;
 }
+.finalSquadCover {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 10%;
+  border: 1px solid white;
+}
+.finalSquadCover a {
+  color: #09aeff;
+  font-size: 1.2rem;
+  padding: 0.1rem 1rem;
+  text-decoration: none;
+  border: 2px solid #09aeff;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.finalSquadCover a:hover {
+  font-size: 1.5rem;
+}
+
 .matchBoxes {
   position: relative;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
   width: 90%;
   height: 20%;
   border: 1px solid white;
+  border-radius: 50px;
 }
 .matchBoxesHeading {
   position: relative;
@@ -94,35 +100,22 @@
   flex-wrap: wrap;
   width: 100%;
   height: 40%;
-  border: 1px solid white;
+  border: 0px solid white;
   overflow-wrap: scroll;
-}
-.sr {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 10%;
-  height: 100%;
-  border: 1px solid red;
-}
-.sr a {
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  color: white;
-  font-size: 1.5rem;
 }
 .matchTeamName {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 90%;
+  width: 100%;
   height: 100%;
-  border: 1px solid red;
+  border: 0px solid red;
 }
 .matchTeamName a {
   color: white;
-  font-size: 1.5rem;
+  margin-top: 0.8rem;
+  font-size: 1.2rem;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
@@ -132,32 +125,33 @@
   justify-content: center;
   width: 100%;
   height: 60%;
-  border: 1px solid white;
+  border: 0px solid white;
 }
-.winningEmoji {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 20%;
-  height: 100%;
-  border: 1px solid white;
+.matchStartBtn i {
+  color: white;
+  font-size: 1.5rem;
+  padding-right: 1rem;
 }
 .matchStartBtn {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 80%;
+  width: 100%;
   height: 100%;
-  border: 1px solid white;
+  border: 0px solid white;
 }
-.matchStartBtnAfter {
-  width: 80%;
-}
-.matchStartBtn button,
-.submitBtn button {
+.matchStartBtn button {
   transform: scale(1.2);
   width: 3rem;
   cursor: pointer;
+  border-radius: 20px;
+  background-color: transparent;
+  color: white;
+}
+.matchStartBtn #matchResult {
+  color: white;
+  font-size: 1rem;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TEAM MAKING WEBSITE</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="header.css" />
+    <link rel="stylesheet" href="curremtMatch.css" />
+    <link rel="stylesheet" href="footer.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="mobileCover">
+        <!-- Header part start -->
+        <header class="header"></header>
+        <!-- Header part over -->
+
+        <!-- boby part start -->
+        <div class="body">
+          <div class="matchHeading"><a>Match Records</a></div>
+          <div class="matchContentPart2">
+            <div class="currentMatch">
+              <div class="currentMatchHeading">
+                <div class="currentMatchName">
+                  <a id="currentMatchNameId">Nitesh Vs Savita</a>
+                </div>
+                <div class="currentMatchTime">
+                  <a id="currentMatchTimeId">(15:30)</a>
+                </div>
+              </div>
+              <div class="currentMatchBody">
+                <form>
+                  <div class="winnerCover">
+                    <label for="winner">Points Table</label>
+                  </div>
+                  <div class="playerNameCover">
+                    <div class="playerA">
+                      <div class="playerwinnerName">
+                        <label for="winner" id="playerA">Nitesh</label>
+                      </div>
+                      <div class="playerInput">
+                        <input
+                          type="number"
+                          id="playerAPoints"
+                          min="0"
+                          value="0"
+                          placeholder="0"
+                        />
+                      </div>
+                    </div>
+                    <div class="playerB">
+                      <div class="playerwinnerName">
+                        <label for="winner" id="playerB">Savita</label>
+                      </div>
+                      <div class="playerInput">
+                        <input
+                          type="number"
+                          id="playerBPoints"
+                          min="0"
+                          value="0"
+                          placeholder="0"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="submitBtn">
+                    <a id="submitBtnId">Submit</a>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- boby part over -->
+
+        <!-- footer part start -->
+        <footer class="footer"></footer>
+        <!-- footer part over -->
+      </div>
+    </div>
+    <script src="currentMatch.js" type="module"></script>
+  </body>
+</html>

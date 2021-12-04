@@ -110,6 +110,11 @@ nextBtn.addEventListener("click", (e) => {
     data.id = 0;
     data.membersName = squad;
     data.matchSquad = shuffleMatchSquad;
+    data.gamePoints = points.value;
+    data.finalSquad = [];
+    for (let i = 0; i < shuffleMatchSquad.length; i++) {
+      data.matchSquad[i].over = false;
+    }
     localStorage.setItem("tournament", JSON.stringify(data));
 
     // set the attributes
