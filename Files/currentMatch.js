@@ -18,7 +18,13 @@ let matchSquad = Data.matchSquad;
 let matchId;
 for (var i = 0; i < matchSquad.length; i++) {
   if (!matchSquad[i].over) {
-    matchHeading.innerHTML = `<a>Match no. ${i + 1}</a>`;
+    if (Data.remainingMatches == 0) {
+      matchHeading.innerHTML = `<a>Semi-final Match</a>`;
+    } else if (Data.remainingMatches == -1) {
+      matchHeading.innerHTML = `<a>Final Match</a>`;
+    } else {
+      matchHeading.innerHTML = `<a>Match no. ${i + 1}</a>`;
+    }
     currentTeam.innerHTML = `${matchSquad[i].TeamName1} Vs ${matchSquad[i].TeamName2}`;
     playerA.innerHTML = `${matchSquad[i].TeamName1}`;
     playerB.innerHTML = `${matchSquad[i].TeamName2}`;
@@ -29,7 +35,33 @@ for (var i = 0; i < matchSquad.length; i++) {
   }
 }
 
-let winner = "";
+// set the currentPosition of players
+let position = [];
+const findRank = () => {
+  for (var i = 0; i < Data.membersProfile.length; i++) {
+    let pos = 0;
+    let currPoints = -Infinity;
+    Data.membersProfile.map((item, index) => {
+      if (item.position == "0" && currPoints < item.totalPoints) {
+        pos = index;
+        currPoints = item.totalPoints;
+      }
+    });
+    Data.membersProfile[pos].position = "1";
+    position.push({
+      rank: position.length,
+      name: Data.membersProfile[pos].name,
+      points: Data.membersProfile[pos].totalPoints,
+    });
+  }
+};
+console.log(position);
+
+// sumit the page
+let winner;
+let looser;
+let winnerId;
+let looserId;
 submitBtnId.addEventListener("click", () => {
   if (playerBPoints.value == 0 || playerAPoints.value == 0) {
     alert("Please!! fill the Points Table");
@@ -39,21 +71,74 @@ submitBtnId.addEventListener("click", () => {
     // find the winner
     if (playerBPoints.value > playerAPoints.value) {
       winner = playerB.innerHTML;
-    } else {
+      looser = playerA.innerHTML;
+    } else if (playerBPoints.value < playerAPoints.value) {
+      looser = playerB.innerHTML;
       winner = playerA.innerHTML;
     }
 
     // set the data jsonFile
+    Data.membersProfile.filter((item, index) => {
+      if (winner == item.name) {
+        return (winnerId = index);
+      }
+    });
+    Data.membersProfile.filter((item, index) => {
+      if (looser == item.name) {
+        return (looserId = index);
+      }
+    });
+    Data.membersProfile[winnerId].totalPoints += Math.abs(
+      playerBPoints.value - playerAPoints.value
+    );
+
+    Data.membersProfile[looserId].totalPoints -= Math.abs(
+      playerBPoints.value - playerAPoints.value
+    );
+
+    Data.remainingMatches--;
     Data.matchSquad[matchId].over = true;
     Data.matchSquad[matchId].time = timeSpent;
     Data.matchSquad[matchId].pointsA = playerAPoints.value;
     Data.matchSquad[matchId].pointsB = playerBPoints.value;
     Data.matchSquad[matchId].winnerName = winner;
+    Data.matchSquad[matchId].looserName = looser;
     Data.matchSquad[matchId].margin = Math.abs(
       playerBPoints.value - playerAPoints.value
     );
 
+    // call position defing function
+    findRank();
+    Data.playersPosition = position;
+    Data.membersProfile.map((item) => {
+      item.position = "0";
+    });
+
+    // set the Data to local Storage
     localStorage.setItem("tournament", JSON.stringify(Data));
     submitBtnId.setAttribute("href", "squad.html");
   }
+});
+
+// demo
+
+//animation is done by click on pofile btn
+document.querySelector(".footer").addEventListener("click", () => {
+  document
+    .querySelector(".matchContentPart2")
+    .classList.toggle("matchContentPart2Acive");
+  document
+    .querySelector(".currentPositionCover")
+    .classList.toggle("currentPositionCoverActive");
+});
+
+//display the profile info on profile photo
+const allProfile = document.querySelector(".allProfile");
+Data.playersPosition.map((item) => {
+  //jadoo
+  return (allProfile.innerHTML += `<div class="profileList">
+  <span><a> Position - ${item.rank + 1}</a></span>
+  <span><a>${item.name}</a></span>
+  <span><a>Current Points : ${item.points}</a></span>
+</div>`);
 });

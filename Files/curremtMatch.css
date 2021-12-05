@@ -7,6 +7,7 @@
   width: 100%;
   height: 85%;
   border: 0px solid red;
+  overflow: hidden;
 }
 .matchHeading {
   position: relative;
@@ -15,13 +16,13 @@
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
-  height: 10%;
+  height: 20%;
   border: 0px solid red;
 }
 .matchHeading a {
   color: white;
-  margin-top: 1rem;
-  font-size: 2.5rem;
+  margin-top: 2rem;
+  font-size: 2rem;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
@@ -33,9 +34,15 @@
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
-  height: 90%;
+  height: 80%;
   border: 0px solid red;
+  overflow-y: scroll;
 }
+.matchContentPart2Acive {
+  height: 20%;
+  transition: 0.5s;
+}
+
 .currentMatch {
   position: relative;
   display: flex;
@@ -43,12 +50,35 @@
   align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
+  margin: 1rem 0;
   width: 90%;
   height: 70%;
+  min-height: 370px;
   border: 1px solid red;
   border-radius: 40px;
 }
-
+.matchContentPart2::-webkit-scrollbar {
+  width: 10px;
+  border-radius: 10px;
+  box-shadow: inset 0 0 8px black;
+  visibility: hidden;
+}
+.matchContentPart2::-webkit-scrollbar-track {
+  background-color: transparent;
+  width: 10px;
+  height: 10px;
+}
+.matchContentPart2::-webkit-scrollbar-thumb {
+  background: white;
+  width: 10px;
+  height: 20px;
+  border-radius: 50px;
+  border: 2px solid black;
+}
+.matchContentPart2::-webkit-scrollbar-corner {
+  background-color: black;
+  width: 10px;
+}
 .currentMatchHeading {
   position: relative;
   display: flex;

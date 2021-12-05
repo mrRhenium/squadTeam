@@ -9,6 +9,9 @@ const nextBtn = document.querySelector(".nextBtn");
 const addPlayer = document.querySelector("#addPlayer");
 const totalPlayer = document.querySelector("#totalPlayer");
 
+let history = localStorage.getItem("tournamentHistory");
+history = JSON.parse(history);
+
 let total = 0;
 saveBtn.addEventListener("click", (e) => {
   e.preventDefault();
@@ -43,7 +46,12 @@ addTeam.addEventListener("click", (e) => {
   e.preventDefault();
   if (teamName.value != "" && total != 0) {
     if (squad.length < total) {
-      squad[squad.length] = teamName.value;
+      squad[squad.length] = {
+        name: teamName.value,
+        totalPoints: 0,
+        category: "average",
+        position: "0",
+      };
       addPlayer.innerHTML = `Add Player (${squad.length})`;
     }
     // disable the add field after add all players
@@ -84,10 +92,10 @@ nextBtn.addEventListener("click", (e) => {
     let matchSquad = [];
     for (var i = 0; i < squad.length; i++) {
       for (var j = i + 1; j < squad.length; j++) {
-        // matchSquad.push(squadData.squad[i] + "-" + squadData.squad[j]);
         matchSquad[matchSquad.length] = {
-          TeamName1: `${squad[i]}`,
-          TeamName2: `${squad[j]}`,
+          TeamName1: `${squad[i].name}`,
+          TeamName2: `${squad[j].name}`,
+          matchCategory: "normal",
         };
       }
     }
@@ -108,14 +116,20 @@ nextBtn.addEventListener("click", (e) => {
     // save to the local Storage
     const data = new Object();
     data.id = 0;
-    data.membersName = squad;
+    data.membersProfile = squad;
     data.matchSquad = shuffleMatchSquad;
     data.gamePoints = points.value;
-    data.finalSquad = [];
+    data.playersPosition = [];
+    data.remainingMatches = shuffleMatchSquad.length;
     for (let i = 0; i < shuffleMatchSquad.length; i++) {
       data.matchSquad[i].over = false;
     }
     localStorage.setItem("tournament", JSON.stringify(data));
+
+    if (!history) {
+      history = [];
+      localStorage.setItem("tournamentHistory", JSON.stringify(history));
+    }
 
     // set the attributes
     nextBtn.setAttribute("href", "Files/squad.html");
