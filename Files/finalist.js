@@ -1,110 +1,172 @@
+// this page is direct link to squad.html page
+// this is fully depend algorithm which decide
+// 1 rank holder to finalist
+// 2 and 3 rank holder to semifinalist
+// 1 or 2/3 play findal match
+
+// Data is define in his sibling script "squad.js" file
+console.log(Data);
+
+// we get the tournament history json file in local
+// storge
 let tournamentHistory = localStorage.getItem("tournamentHistory");
 tournamentHistory = JSON.parse(tournamentHistory);
 console.log(tournamentHistory);
 
+// we define the playerRank array which is merge in tournament History json file after the whole match is over
 const playerRank = [{ date: new Date().toISOString() }];
 console.log(playerRank[0]);
 
 const finalPageBtn = document.querySelector("#finalPageBtn");
-console.log(Data);
 
+//we change the button text after every part of tournament
 if (Data.remainingMatches >= 0) {
   finalPageBtn.innerHTML = "SemiFinalist";
-} else if (Data.remainingMatches == -1) {
+} else if (Data.remainingMatches == -1 || Data.remainingMatches == -2) {
   finalPageBtn.innerHTML = "Finalist";
-} else if (Data.remainingMatches == -2) {
+} else if (Data.remainingMatches == -3 || Data.remainingMatches == -4) {
   finalPageBtn.innerHTML = "Finish";
 }
 
-let semifinalistArray = [];
-let finalistArray = [];
-// category making algorithmic function
-const categoryDecided = (ctg) => {
-  let maxPoints = -Infinity;
-  let id;
-  Data.membersProfile.map((item, index) => {
-    if (maxPoints < item.totalPoints && item.category == "average") {
-      maxPoints = item.totalPoints;
-      id = index;
-    }
-    return id;
-  });
-  if (ctg == "semifinalist") {
-    semifinalistArray.push(Data.membersProfile[id].name);
-  }
-  return (Data.membersProfile[id].category = ctg);
-};
-
-let matchOver = false;
-// FINAL PAGE FUDNTION
+// final page btn different type of functionality is set
 finalPageBtn.addEventListener("click", () => {
-  if (Data.remainingMatches <= 0) {
-    matchOver = true;
-  }
-  if (!matchOver) {
-    alert("Please!! Complete all the remaining matchs");
-  } else if (Data.remainingMatches == 0) {
-    categoryDecided("finalist");
-    categoryDecided("semifinalist");
-    categoryDecided("semifinalist");
-    console.log(finalistArray);
-    console.log(semifinalistArray);
+  // get semifinal players
+  if (Data.remainingMatches == 0 && finalPageBtn.innerHTML == "SemiFinalist") {
+    // disable rematch functionality after selection of semi and finalist
+    Data.matchSquad.map((item) => {
+      item.rematch = false;
+    });
 
-    // again fill the matchSquad Array
+    // ensure the semifinalist will be selected
+    Data.remainingMatches--;
+
+    // set the semifinal match in matchSquad array
     Data.matchSquad.push({
-      TeamName1: `${semifinalistArray[0]}`,
-      TeamName2: `${semifinalistArray[1]}`,
-      matchCategory: "Semi-final",
+      TeamName1: `${Data.playersPosition[1].name}`,
+      TeamName2: `${Data.playersPosition[2].name}`,
+      matchCategory: "semi-final",
+      over: false,
+      rematch: true,
     });
 
     // set some match agian in localStorage
     localStorage.setItem("tournament", JSON.stringify(Data));
+    window.location.reload();
 
-    location.reload();
-    //
-  } else if (Data.remainingMatches == -1) {
-    // find out the finalist
-    Data.membersProfile.filter((item) => {
-      if (item.category == "finalist") {
-        finalistArray.push(item.name);
-      }
+    // end the functionality
+
+    // get the final players
+  } else if (
+    Data.remainingMatches == -2 &&
+    finalPageBtn.innerHTML == "Finalist"
+  ) {
+    // disable rematch functionality after selection of semi and finalist
+    Data.matchSquad.map((item) => {
+      item.rematch = false;
     });
-    Data.matchSquad.filter((item) => {
-      if (item.matchCategory == "Semi-final") {
-        finalistArray.push(item.winnerName);
-      }
-    });
+
+    // ensure the finalist are selected
+    Data.remainingMatches--;
+
+    // set the final match in matchSquad array
     Data.matchSquad.push({
-      TeamName1: `${finalistArray[0]}`,
-      TeamName2: `${finalistArray[1]}`,
-      matchCategory: "Final",
+      TeamName1: `${Data.playersPosition[0].name}`,
+      TeamName2: `${Data.playersPosition[1].name}`,
+      matchCategory: "final",
+      over: false,
+      rematch: true,
     });
 
     // set some match agian in localStorage
     localStorage.setItem("tournament", JSON.stringify(Data));
+    window.location.reload();
 
-    // refresh the web
-    location.reload();
-  } else if (Data.remainingMatches == -2) {
-    // Calculate the ranking of the players
+    // end of the funcionality
 
+    // set the tournament history profile
+  } else if (
+    Data.remainingMatches == -4 &&
+    finalPageBtn.innerHTML == "Finish"
+  ) {
+    // Disable the finished btn functionality after one time click
+    Data.remainingMatches--;
+
+    // set the player Rank array from playerPosition key in tournament file in local storage
+    let winnerFinalPoints;
+    let looserFinalPoints;
+    let looserSemiPoints;
+    let lastMatchIndex = Data.matchSquad.length;
+
+    Data.membersProfile.map((item) => {
+      //get points of 1st player
+      if (item.name == Data.matchSquad[lastMatchIndex - 1].winnerName) {
+        winnerFinalPoints = item.totalPoints;
+      }
+
+      // get points of 2nd player
+      if (item.name == Data.matchSquad[lastMatchIndex - 1].looserName) {
+        looserFinalPoints = item.totalPoints;
+      }
+
+      // get points of 3rd player
+      if (item.name == Data.matchSquad[lastMatchIndex - 2].looserName) {
+        looserSemiPoints = item.totalPoints;
+      }
+    });
+
+    // set 1st position
+    playerRank.push({
+      name: Data.matchSquad[lastMatchIndex - 1].winnerName,
+      rank: 0,
+      points: winnerFinalPoints,
+    });
+
+    // set 2nd position
+    playerRank.push({
+      name: Data.matchSquad[lastMatchIndex - 1].looserName,
+      rank: 1,
+      points: looserFinalPoints,
+    });
+
+    // set 3rd position
+    playerRank.push({
+      name: Data.matchSquad[lastMatchIndex - 2].looserName,
+      rank: 2,
+      points: looserSemiPoints,
+    });
+
+    // set upper than 2 index
+    // due to re-assemble the points table after semi and finals
     Data.playersPosition.map((item, index) => {
-      playerRank.push({
-        name: item.name,
-        rank: index,
-        points: item.points,
-      });
+      if (index > 2) {
+        playerRank.push({
+          name: item.name,
+          rank: index,
+          points: item.points,
+        });
+      }
     });
 
+    // put the new touranment detain in tournaments history json file in local storage
     tournamentHistory.push(playerRank);
+    console.log(playerRank);
     console.log(tournamentHistory);
+
     //set the player rank in localStorage
     localStorage.setItem(
       "tournamentHistory",
       JSON.stringify(tournamentHistory)
     );
 
-    // Show some message in alert box
-    alert("Tournament is over ");
+    // set some match agian in localStorage
+    localStorage.setItem("tournament", JSON.stringify(Data));
+  } else if ((finalPageBtn.innerHTML = "Over")) {
+    // show some alert message after over the whole tournament
+    alert("Tournament is over");
+
+    // Go to Tournament profile file
+    finalPageBtn.setAttribute("href", "tournamentHistory.html");
+  } else {
+    alert("Please!! Finish all the remaining matches");
   }
 });

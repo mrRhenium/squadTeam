@@ -1,0 +1,110 @@
+.body {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 85%;
+  border: 1px solid white;
+  overflow: hidden;
+}
+.tournamentProfileCover {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+  border: 1px solid white;
+}
+.tournamentProfileHeading {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 10%;
+  border: 1px solid white;
+}
+.tournamentProfileHeading a {
+  color: white;
+  font-size: 1.5rem;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.tournamentProfileBody {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 90%;
+  border: 1px solid white;
+  overflow-y: scroll;
+}
+.tournamentProfileList {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 1rem 0;
+  padding: 0.5rem 0;
+  width: 80%;
+  min-height: 30%;
+  height: min-content;
+  border: 1px solid white;
+  border-radius: 30px;
+}
+.tournamentProfileBody::-webkit-scrollbar {
+  width: 10px;
+  border-radius: 10px;
+  box-shadow: inset 0 0 8px black;
+  visibility: hidden;
+}
+.tournamentProfileBody::-webkit-scrollbar-track {
+  background-color: transparent;
+  width: 10px;
+  height: 10px;
+}
+.tournamentProfileBody::-webkit-scrollbar-thumb {
+  background: white;
+  width: 5px;
+  height: 2px;
+  border-radius: 50px;
+  border: 2px solid black;
+}
+.tournamentProfileBody::-webkit-scrollbar-corner {
+  background-color: black;
+  width: 10px;
+}
+.tntProfItems {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  width: 75%;
+  height: auto;
+  border: 1px solid white;
+  border-radius: 30px;
+}
+.tntProfItems a {
+  display: block;
+  color: white;
+  margin: 0.05rem 0.5rem;
+  letter-spacing: 0.15rem;
+  transform: translateX(1rem);
+}
+#rankItems {
+  position: absolute;
+  display: flex;
+  font-size: 2.8rem;
+  transform: translateX(-3.5rem);
+}

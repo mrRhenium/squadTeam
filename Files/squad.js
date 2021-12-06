@@ -1,3 +1,4 @@
+// We fetch data from local storage to set the matches in squad.html
 let Data = localStorage.getItem("tournament");
 Data = JSON.parse(Data);
 console.log(Data);
@@ -46,14 +47,50 @@ for (var i = 0; i < matchSquad.length; i++) {
   if (matchSquad[i].over) {
     matchTeamName[
       i
-    ].innerHTML = `<a>${matchSquad[i].TeamName1}-(${matchSquad[i].pointsA}) Vs ${matchSquad[i].TeamName2}-(${matchSquad[i].pointsB})</a>`;
+    ].innerHTML = `<a>${matchSquad[i].TeamName1}-(${matchSquad[i].pointsA}) Vs ${matchSquad[i].TeamName2}-(${matchSquad[i].pointsB})</a> <a class="rematchBtn"><i id="rematch" class="fa fa-undo" aria-hidden="true"></i></a>`;
+
     matchStartBtn[
       i
     ].innerHTML = `<i class="fa fa-trophy" aria-hidden="true"></i> <a id="matchResult">${matchSquad[i].winnerName} is won by ${matchSquad[i].margin} Points</a>`;
+
+    // difine the rematch btn
+    const rematchBtn = document.querySelectorAll(".rematchBtn");
+    const rematch = document.querySelectorAll("#rematch");
+    rematch[i].onclick = () => {
+      // set the over false
+      Data.matchSquad[i - 1].over = false;
+      // set the remaingMatches is pre value
+      Data.remainingMatches++;
+      // set the profile to previous rank
+      Data.playersPosition.map((item) => {
+        if (item.name == Data.matchSquad[i - 1].winnerName) {
+          item.points -= Data.matchSquad[i - 1].margin;
+        }
+        if (item.name == Data.matchSquad[i - 1].looserName) {
+          item.points += Data.matchSquad[i - 1].margin;
+        }
+      });
+      // set the totals points in membersProfile unchanged
+      Data.membersProfile.map((item) => {
+        if (item.name == Data.matchSquad[i - 1].winnerName) {
+          item.totalPoints -= Data.matchSquad[i - 1].margin;
+        }
+        if (item.name == Data.matchSquad[i - 1].looserName) {
+          item.totalPoints += Data.matchSquad[i - 1].margin;
+        }
+      });
+
+      // set changes in local storage
+      localStorage.setItem("tournament", JSON.stringify(Data));
+
+      window.location.href = `currentMatch.html`;
+      console.log(i + "click");
+    };
   } else if (!matchSquad[i].over) {
     startBtn[i].onclick = () => {
       startBtn[i].setAttribute("href", "currentMatch.html");
     };
+
     break;
   }
 }

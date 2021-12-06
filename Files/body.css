@@ -5,19 +5,21 @@
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
-  height: 85%;
+  height: 80%;
   border: 1px solid red;
 }
 .headingBody {
   position: relative;
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 100%;
   height: 15%;
   border: 1px solid red;
 }
-.body a {
+.headingBody a {
   color: white;
+  /* margin-top: 1rem; */
   font-size: 3rem;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-weight: bolder;
@@ -42,7 +44,7 @@ form {
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
-  height: 25%;
+  height: 28%;
   border: 1px solid white;
 }
 .formElementHeading {

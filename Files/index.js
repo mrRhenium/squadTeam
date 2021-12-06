@@ -40,12 +40,23 @@ gamePointBtn.addEventListener("click", (e) => {
   }
 });
 
-const squad = [];
 // add player name in a array which is "squad Array"
+const squad = [];
 addTeam.addEventListener("click", (e) => {
   e.preventDefault();
   if (teamName.value != "" && total != 0) {
-    if (squad.length < total) {
+    // check the all entered  name is unique or not
+    let validName = true;
+    squad.filter((item) => {
+      if (item.name == teamName.value) {
+        alert(
+          `${teamName.value} is already taken \n Please!! Enter unique Name`
+        );
+        validName = false;
+      }
+    });
+
+    if (squad.length < total && validName) {
       squad[squad.length] = {
         name: teamName.value,
         totalPoints: 0,
@@ -96,6 +107,8 @@ nextBtn.addEventListener("click", (e) => {
           TeamName1: `${squad[i].name}`,
           TeamName2: `${squad[j].name}`,
           matchCategory: "normal",
+          over: false,
+          rematch: true,
         };
       }
     }
@@ -121,9 +134,11 @@ nextBtn.addEventListener("click", (e) => {
     data.gamePoints = points.value;
     data.playersPosition = [];
     data.remainingMatches = shuffleMatchSquad.length;
-    for (let i = 0; i < shuffleMatchSquad.length; i++) {
-      data.matchSquad[i].over = false;
-    }
+    // for (let i = 0; i < shuffleMatchSquad.length; i++) {
+    //   data.matchSquad[i].over = false;
+    // }
+
+    // set the data in local storage
     localStorage.setItem("tournament", JSON.stringify(data));
 
     if (!history) {
