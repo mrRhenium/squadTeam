@@ -26,7 +26,7 @@
   height: 13%;
 }
 .matchHeading a {
-  color: lightseagreen;
+  color: #09aef9;
   margin-top: 0rem;
   font-size: 2rem;
   padding: 0 2rem;
@@ -238,14 +238,14 @@ form {
   border: 0px solid red;
 }
 .submitBtn a {
-  color: lightseagreen;
+  color: #09aef9;
   text-transform: uppercase;
   letter-spacing: 0.08rem;
   margin-top: 1rem;
   font-size: 1.2rem;
   padding: 0.1rem 1rem;
   text-decoration: none;
-  border: 2px solid lightseagreen;
+  border: 2px solid #09aef9;
   border-radius: 20px;
   cursor: pointer;
   background-color: transparent;
