@@ -8,8 +8,8 @@ console.log(tournamentList);
 // set the no of list which is listed in local storage
 const tournamentProfileBody = document.querySelector(".tournamentProfileBody");
 tournamentList.map((item) => {
-  tournamentProfileBody.innerHTML += `<div class="tournamentProfileList"><span class="tntProfItems" style="width: 90%; padding: 0.1rem">
- <a style="transform: translateX(0rem); margin: 0 0"
+  tournamentProfileBody.innerHTML += `<div class="tournamentProfileList"><span class="tntProfItems" style="width: 90%; padding: 0.1rem;background-color: rgba(23, 236, 4, 0.5);border:1px solid white">
+  <a style="transform: translateX(0rem); margin: 0 0;color:white"
  >${item[0].date.substr(0, 10)}</a></span>
  </div>`;
 });

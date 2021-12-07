@@ -41,7 +41,7 @@ finalPageBtn.addEventListener("click", () => {
     Data.matchSquad.push({
       TeamName1: `${Data.playersPosition[1].name}`,
       TeamName2: `${Data.playersPosition[2].name}`,
-      matchCategory: "Semi-Final",
+      matchCategory: "semi-final",
       over: false,
       rematch: true,
     });
@@ -58,9 +58,9 @@ finalPageBtn.addEventListener("click", () => {
     finalPageBtn.innerHTML == "Finalist"
   ) {
     // disable rematch functionality after selection of semi and finalist
-    Data.matchSquad.map((item) => {
-      item.rematch = false;
-    });
+    // Data.matchSquad.map((item) => {
+    //   item.rematch = false;
+    // });
 
     // ensure the finalist are selected
     Data.remainingMatches--;
@@ -68,8 +68,8 @@ finalPageBtn.addEventListener("click", () => {
     // set the final match in matchSquad array
     Data.matchSquad.push({
       TeamName1: `${Data.playersPosition[0].name}`,
-      TeamName2: `${Data.playersPosition[1].name}`,
-      matchCategory: "Final",
+      TeamName2: `${Data.matchSquad[Data.matchSquad.length - 1].winnerName}`,
+      matchCategory: "final",
       over: false,
       rematch: true,
     });
@@ -157,6 +157,11 @@ finalPageBtn.addEventListener("click", () => {
 
     // set some match agian in localStorage
     localStorage.setItem("tournament", JSON.stringify(Data));
+
+    //disable the rematch btn before we go to next page
+    // due to this we can ensure that after go to tournament page if any one again visit the squad page he/she will not be click the rematch btn of final match
+    Data.tournamentOver = true;
+    rematchBtn[Data.matchSquad.length - 1].classList.add("rematchDisable");
 
     // Go to Tournament profile file
     finalPageBtn.setAttribute("href", "tournamentHistory.html");

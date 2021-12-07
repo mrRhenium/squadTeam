@@ -102,10 +102,12 @@ for (var i = 0; i < matchSquad.length; i++) {
 // disable rematch functionality after selection of semi and finalist
 const rematchBtn = document.querySelectorAll(".rematchBtn");
 if (Data.remainingMatches < 0) {
-  for (var i = 0; i < Data.matchSquad.length; i++) {
-    if (i != Data.matchSquad.length - 1)
-      if (Data.matchSquad[i].over)
+  for (let i = 0; i < Data.matchSquad.length; i++) {
+    if (i != Data.matchSquad.length - 1 || !Data.tournamentOver)
+      if (Data.matchSquad[i].over) {
         rematchBtn[i].classList.add("rematchDisable");
+        console.log(i + " this one " + Data.matchSquad[i].over);
+      }
   }
 }
 

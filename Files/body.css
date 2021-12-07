@@ -27,7 +27,7 @@
   color: white;
   margin-top: 1.5rem;
   padding: 0 2rem;
-  font-size: 2.8rem;
+  font-size: 2.7rem;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-weight: bolder;
   border: 1px solid white;
@@ -103,6 +103,7 @@ form {
   border: 0px solid white;
 }
 .formBodyInput input {
+  color: white;
   width: 50%;
   height: 50%;
   border: 1px solid black;
@@ -111,7 +112,7 @@ form {
   background-color: rgba(3, 196, 230, 0.5);
 }
 .formBodyInput input::placeholder {
-  color: black;
+  color: white;
 }
 .formBodyBtn {
   position: relative;

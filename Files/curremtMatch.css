@@ -183,6 +183,7 @@ form {
   height: 50%;
   border: 1px solid white;
   border-radius: 50px;
+  background-color: rgba(225, 225, 225, 0.5);
 }
 
 .playerB {
@@ -195,6 +196,7 @@ form {
   height: 50%;
   border: 1px solid white;
   border-radius: 50px;
+  background-color: rgba(225, 225, 225, 0.5);
 }
 .playerwinnerName {
   position: relative;
@@ -206,7 +208,7 @@ form {
   border: 0px solid red;
 }
 .playerwinnerName {
-  color: white;
+  color: black;
   font-size: 1.5rem;
 }
 .playerInput {
@@ -219,8 +221,8 @@ form {
   border: 0px solid red;
 }
 .playerInput input {
-  color: white;
-  border: 1px solid white;
+  color: black;
+  border: 1px solid black;
   width: 3.5rem;
   height: 1.7rem;
   background-color: transparent;
@@ -238,17 +240,17 @@ form {
   border: 0px solid red;
 }
 .submitBtn a {
-  color: #09aef9;
+  color: white;
   text-transform: uppercase;
   letter-spacing: 0.08rem;
   margin-top: 1rem;
   font-size: 1.2rem;
   padding: 0.1rem 1rem;
   text-decoration: none;
-  border: 2px solid #09aef9;
+  border: 2px solid white;
   border-radius: 20px;
   cursor: pointer;
-  background-color: transparent;
+  background-color: rgba(23, 236, 4, 0.5);
 }
 .submitBtn a:hover {
   font-size: 1rem;
