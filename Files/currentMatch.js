@@ -18,9 +18,9 @@ let matchSquad = Data.matchSquad;
 let matchId;
 for (var i = 0; i < matchSquad.length; i++) {
   if (!matchSquad[i].over) {
-    if (Data.remainingMatches == 0) {
+    if (Data.remainingMatches == -1) {
       matchHeading.innerHTML = `<a>Semi-final Match</a>`;
-    } else if (Data.remainingMatches == -1) {
+    } else if (Data.remainingMatches == -3) {
       matchHeading.innerHTML = `<a>Final Match</a>`;
     } else {
       matchHeading.innerHTML = `<a>Match no. ${i + 1}</a>`;

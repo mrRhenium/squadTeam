@@ -1,6 +1,6 @@
 .currentPositionCover {
   position: relative;
-  display: none;
+  display: flex;
   justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
@@ -9,13 +9,12 @@
   border: 1px solid red;
   border-top-right-radius: 30px;
   border-top-left-radius: 30px;
+  transition: 1s ease-in-out;
 }
 .currentPositionCoverActive {
   display: flex;
   height: 60%;
-  transition: 1s;
 }
-
 .profileHeading {
   position: relative;
   display: flex;
@@ -76,6 +75,7 @@
   margin: 0.5rem 0;
   width: 75%;
   height: 30%;
+  min-height: 84px;
   border: 1px solid white;
   border-radius: 50px;
 }

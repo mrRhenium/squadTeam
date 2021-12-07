@@ -36,10 +36,10 @@
   height: 80% /*20-80%*/;
   border: 0px solid red;
   overflow-y: scroll;
+  transition: 1s ease-in-out;
 }
 .matchContentAcive {
   height: 20%;
-  transition: 0.5s;
 }
 
 .matchContent::-webkit-scrollbar {
@@ -162,6 +162,9 @@
 }
 .rematchBtn:hover i {
   font-size: 0.7rem;
+}
+.rematchDisable {
+  display: none;
 }
 .matchStartBtn {
   position: relative;

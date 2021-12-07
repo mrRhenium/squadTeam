@@ -30,7 +30,7 @@
 }
 .tournamentProfileHeading a {
   color: white;
-  font-size: 1.5rem;
+  font-size: 1.9rem;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
@@ -105,6 +105,14 @@
 #rankItems {
   position: absolute;
   display: flex;
-  font-size: 2.8rem;
+  font-size: 2.5rem;
   transform: translateX(-3.5rem);
+}
+#speakingBtn {
+  cursor: pointer;
+  font-size: 1rem;
+}
+#speakingBtn:hover {
+  cursor: pointer;
+  font-size: 0.8rem;
 }

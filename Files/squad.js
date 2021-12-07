@@ -52,10 +52,11 @@ for (var i = 0; i < matchSquad.length; i++) {
     matchStartBtn[
       i
     ].innerHTML = `<i class="fa fa-trophy" aria-hidden="true"></i> <a id="matchResult">${matchSquad[i].winnerName} is won by ${matchSquad[i].margin} Points</a>`;
+    console.log("add");
+
+    const rematch = document.querySelectorAll("#rematch");
 
     // difine the rematch btn
-    const rematchBtn = document.querySelectorAll(".rematchBtn");
-    const rematch = document.querySelectorAll("#rematch");
     rematch[i].onclick = () => {
       // set the over false
       Data.matchSquad[i - 1].over = false;
@@ -88,10 +89,23 @@ for (var i = 0; i < matchSquad.length; i++) {
     };
   } else if (!matchSquad[i].over) {
     startBtn[i].onclick = () => {
-      startBtn[i].setAttribute("href", "currentMatch.html");
+      console.log(i + " wow ");
+      window.location.href = `currentMatch.html`;
+      // startBtn[i].setAttribute("href", "currentMatch.html");
     };
 
     break;
+  }
+}
+// function ends here
+
+// disable rematch functionality after selection of semi and finalist
+const rematchBtn = document.querySelectorAll(".rematchBtn");
+if (Data.remainingMatches < 0) {
+  for (var i = 0; i < Data.matchSquad.length; i++) {
+    if (i != Data.matchSquad.length - 1)
+      if (Data.matchSquad[i].over)
+        rematchBtn[i].classList.add("rematchDisable");
   }
 }
 

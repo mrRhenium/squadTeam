@@ -133,6 +133,7 @@ nextBtn.addEventListener("click", (e) => {
     data.matchSquad = shuffleMatchSquad;
     data.gamePoints = points.value;
     data.playersPosition = [];
+    // data.normalMatcheslength = shuffleMatchSquad.length;
     data.remainingMatches = shuffleMatchSquad.length;
     // for (let i = 0; i < shuffleMatchSquad.length; i++) {
     //   data.matchSquad[i].over = false;

@@ -32,10 +32,7 @@ if (Data.remainingMatches >= 0) {
 finalPageBtn.addEventListener("click", () => {
   // get semifinal players
   if (Data.remainingMatches == 0 && finalPageBtn.innerHTML == "SemiFinalist") {
-    // disable rematch functionality after selection of semi and finalist
-    Data.matchSquad.map((item) => {
-      item.rematch = false;
-    });
+    // function start here
 
     // ensure the semifinalist will be selected
     Data.remainingMatches--;
@@ -160,7 +157,10 @@ finalPageBtn.addEventListener("click", () => {
 
     // set some match agian in localStorage
     localStorage.setItem("tournament", JSON.stringify(Data));
-  } else if ((finalPageBtn.innerHTML = "Over")) {
+
+    // Go to Tournament profile file
+    finalPageBtn.setAttribute("href", "tournamentHistory.html");
+  } else if (finalPageBtn.innerHTML == "Over") {
     // show some alert message after over the whole tournament
     alert("Tournament is over");
 
