@@ -51,7 +51,7 @@ for (var i = 0; i < matchSquad.length; i++) {
 
     matchStartBtn[
       i
-    ].innerHTML = `<i class="fa fa-trophy" aria-hidden="true"></i> <a id="matchResult">${matchSquad[i].winnerName} is won by ${matchSquad[i].margin} Points</a>`;
+    ].innerHTML = `<i class="fa fa-trophy" aria-hidden="true" style="color:yellow"></i> <a id="matchResult">${matchSquad[i].winnerName} is won by ${matchSquad[i].margin} Points</a>`;
     console.log("add");
 
     const rematch = document.querySelectorAll("#rematch");
