@@ -50,7 +50,7 @@ const startSpeakProfile = (sentence) => {
   speech.lang = "hi-GB";
   speech.text = sentence;
   speech.volume = 1; //0-1
-  speech.rate = 0.9; //0.1-10
+  speech.rate = 0.8; //0.1-10
   speech.pitch = 1; //0-2
   console.log("started speaking");
   speechSynthesis.speak(speech);
