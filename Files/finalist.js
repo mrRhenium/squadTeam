@@ -41,7 +41,7 @@ finalPageBtn.addEventListener("click", () => {
     Data.matchSquad.push({
       TeamName1: `${Data.playersPosition[1].name}`,
       TeamName2: `${Data.playersPosition[2].name}`,
-      matchCategory: "semi-final",
+      matchCategory: "Semi-Final",
       over: false,
       rematch: true,
     });
@@ -69,7 +69,7 @@ finalPageBtn.addEventListener("click", () => {
     Data.matchSquad.push({
       TeamName1: `${Data.playersPosition[0].name}`,
       TeamName2: `${Data.playersPosition[1].name}`,
-      matchCategory: "final",
+      matchCategory: "Final",
       over: false,
       rematch: true,
     });

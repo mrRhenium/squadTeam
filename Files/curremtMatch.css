@@ -29,7 +29,7 @@
   background-color: rgba(0, 0, 0, 0.7);
 }
 .matchHeading a {
-  color: white;
+  color: lightseagreen;
   margin-top: 0rem;
   font-size: 2rem;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
@@ -111,7 +111,7 @@
   border: 0px solid white;
 }
 .currentMatchName a {
-  color: white;
+  color: yellow;
   margin-top: 0.5rem;
   font-size: 1.8rem;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
@@ -237,14 +237,14 @@ form {
   border: 0px solid red;
 }
 .submitBtn a {
-  color: white;
+  color: lightseagreen;
   text-transform: uppercase;
   letter-spacing: 0.08rem;
   margin-top: 1rem;
   font-size: 1.2rem;
   padding: 0.1rem 1rem;
   text-decoration: none;
-  border: 2px solid white;
+  border: 2px solid lightseagreen;
   border-radius: 20px;
   cursor: pointer;
   background-color: transparent;
