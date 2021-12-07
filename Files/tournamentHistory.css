@@ -6,8 +6,14 @@
   flex-wrap: wrap;
   width: 100%;
   height: 80%;
-  border: 1px solid white;
+  border: 0px solid white;
   overflow: hidden;
+  background-image: url(images/SAVE_20211207_144712.jpg);
+  background-position: center;
+  background-size: cover;
+  background-position-y: 0rem;
+  background-position-x: 0rem;
+  background-repeat: repeat;
 }
 .tournamentProfileCover {
   position: relative;
@@ -17,7 +23,7 @@
   flex-wrap: wrap;
   width: 100%;
   height: 100%;
-  border: 1px solid white;
+  border: 0px solid white;
 }
 .tournamentProfileHeading {
   position: relative;
@@ -27,6 +33,7 @@
   width: 100%;
   height: 10%;
   border: 1px solid white;
+  border-radius: 50px;
 }
 .tournamentProfileHeading a {
   color: white;
@@ -42,14 +49,8 @@
   flex-wrap: wrap;
   width: 100%;
   height: 90%;
-  border: 1px solid white;
+  border: 0px solid white;
   overflow-y: scroll;
-  background-image: url(images/SAVE_20211207_144712.jpg);
-  background-position: center;
-  background-size: cover;
-  background-position-y: 0rem;
-  background-position-x: 0rem;
-  background-repeat: repeat;
 }
 .tournamentProfileList {
   position: relative;
@@ -115,7 +116,7 @@
 #rankItems {
   position: absolute;
   display: flex;
-  font-size: 2.5rem;
+  font-size: 2rem;
   transform: translateX(-3.5rem);
 }
 #speakingBtn {

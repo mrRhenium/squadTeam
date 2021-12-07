@@ -8,6 +8,8 @@
   height: 80%;
   border: 0px solid red;
   overflow: hidden;
+  background-image: url(images/squadBack.jpeg);
+  background-size: cover;
 }
 .matchHeading {
   position: relative;
@@ -16,9 +18,11 @@
   align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 100%;
+  width: 95%;
   height: 10%;
-  border: 0px solid red;
+  border: 1px solid white;
+  border-radius: 50px;
+  background-color: rgba(45, 85, 205, 0.5);
 }
 .matchHeading a {
   color: white;
@@ -38,8 +42,6 @@
   border: 0px solid red;
   overflow-y: scroll;
   transition: 1s ease-in-out;
-  background-image: url(images/squadBack.jpeg);
-  background-size: cover;
 }
 .matchContentAcive {
   height: 20%;
@@ -77,15 +79,16 @@
   border: 0px solid white;
 }
 .finalSquadCover a {
-  color: #09aeff;
+  color: white;
   font-size: 1.2rem;
   letter-spacing: 0.1rem;
   /* margin-top: -1rem; */
   padding: 0.1rem 1rem;
   text-decoration: none;
-  border: 2px solid #09aeff;
+  border: 2px solid white;
   border-radius: 20px;
   cursor: pointer;
+  background-color: darkgreen;
 }
 .finalSquadCover a:hover {
   font-size: 1.5rem;
@@ -103,9 +106,7 @@
   border-radius: 50px;
   background-color: rgba(225, 225, 225, 0.7);
   box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
-  border: 1px solid rgba(225, 225, 225, 0.25);
-  border-top: 1px solid rgba(225, 225, 225, 0.5);
-  border-bottom: 1px solid rgba(225, 225, 225, 0.5);
+  border: 1px solid black;
   backdrop-filter: blur(10px);
   /* filter: blur(0.1px); */
 }
