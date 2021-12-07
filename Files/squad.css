@@ -6,7 +6,7 @@
   flex-wrap: wrap;
   width: 100%;
   height: 85%;
-  border: 1px solid red;
+  border: 0px solid red;
   overflow: hidden;
 }
 .matchHeading {
@@ -18,10 +18,11 @@
   flex-wrap: wrap;
   width: 100%;
   height: 10%;
-  border: 1px solid red;
+  border: 0px solid red;
 }
 .matchHeading a {
   color: white;
+  letter-spacing: 0.1rem;
   font-size: 2rem;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
@@ -78,6 +79,7 @@
 .finalSquadCover a {
   color: #09aeff;
   font-size: 1.2rem;
+  letter-spacing: 0.1rem;
   /* margin-top: -1rem; */
   padding: 0.1rem 1rem;
   text-decoration: none;
@@ -197,7 +199,7 @@
 }
 .matchStartBtn #matchResult {
   color: white;
-  font-size: 1rem;
+  font-size: 1.8rem;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
 }
