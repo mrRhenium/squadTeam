@@ -155,13 +155,12 @@ finalPageBtn.addEventListener("click", () => {
       JSON.stringify(tournamentHistory)
     );
 
-    // set some match agian in localStorage
-    localStorage.setItem("tournament", JSON.stringify(Data));
-
     //disable the rematch btn before we go to next page
     // due to this we can ensure that after go to tournament page if any one again visit the squad page he/she will not be click the rematch btn of final match
     Data.tournamentOver = true;
-    rematchBtn[Data.matchSquad.length - 1].classList.add("rematchDisable");
+
+    // set some match agian in localStorage
+    localStorage.setItem("tournament", JSON.stringify(Data));
 
     // Go to Tournament profile file
     finalPageBtn.setAttribute("href", "tournamentHistory.html");

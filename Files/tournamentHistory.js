@@ -60,6 +60,7 @@ const startSpeakProfile = (sentence) => {
 
 // Speaking funcitonality in tournament profile matches history
 const speakingBtn = document.querySelectorAll("#speakingBtn");
+// const speakingBtnValue = document.querySelectorAll("#speakingBtnValue");
 // assitant scirpt which she speaks to us
 let scriptOfAssitant = "";
 for (let i = 0; i < tournamentList.length; i++) {
@@ -68,6 +69,7 @@ for (let i = 0; i < tournamentList.length; i++) {
 
   // we clicked the speak btn in profile selection
   speakingBtn[i].addEventListener("click", () => {
+    // if (speakingBtn[i].innerHTML == "<a>Speak</a>") {
     speakId = i;
     console.log("this one " + speakId);
 
@@ -97,5 +99,6 @@ for (let i = 0; i < tournamentList.length; i++) {
 
     // again define to null
     scriptOfAssitant = "";
+    // }
   });
 }

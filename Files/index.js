@@ -22,6 +22,7 @@ saveBtn.addEventListener("click", (e) => {
   } else {
     // disable the total team field after enter the value
     totalPlayer.innerHTML = `Total No. of Players is ${total}`;
+    totalTeam.style.backgroundColor = " rgba(0, 0, 0, 0.3)";
     totalTeam.setAttribute("readonly", "true");
     console.log(total);
   }
@@ -36,6 +37,7 @@ gamePointBtn.addEventListener("click", (e) => {
   } else {
     // disable the total team field after enter the value
     gamePoint.innerHTML = `Game Point is ${points.value}`;
+    points.style.backgroundColor = " rgba(0, 0, 0, 0.3)";
     points.setAttribute("readonly", "true");
   }
 });
@@ -67,6 +69,8 @@ addTeam.addEventListener("click", (e) => {
     }
     // disable the add field after add all players
     if (squad.length == total) {
+      teamName.style.backgroundColor = " rgba(0, 0, 0, 0.3)";
+      // teamName.value = "Fullfilled";
       teamName.setAttribute("readonly", "true");
     }
     teamName.value = null;
