@@ -112,14 +112,6 @@ if (Data.remainingMatches < 0) {
   }
 }
 
-//animation is done by click on pofile btn
-document.querySelector(".footer").addEventListener("click", () => {
-  document
-    .querySelector(".currentPositionCover")
-    .classList.toggle("currentPositionCoverActive");
-  document.querySelector(".matchContent").classList.toggle("matchContentAcive");
-});
-
 //display the profile info on profile photo
 const allProfile = document.querySelector(".allProfile");
 Data.playersPosition.map((item) => {
@@ -129,4 +121,20 @@ Data.playersPosition.map((item) => {
   <span><a>${item.name}</a></span>
   <span><a>Current Points : ${item.points}</a></span>
 </div>`);
+});
+
+//animation is done by click on pofile btn
+document.querySelector("#listBtnFooter").addEventListener("click", () => {
+  document
+    .querySelector(".currentPositionCover")
+    .classList.remove("currentPositionCoverActive");
+  document.querySelector(".matchContent").classList.remove("matchContentAcive");
+});
+
+//animation is done by click on pofile btn
+document.querySelector("#profileBtnFooter").addEventListener("click", () => {
+  document
+    .querySelector(".currentPositionCover")
+    .classList.add("currentPositionCoverActive");
+  document.querySelector(".matchContent").classList.add("matchContentAcive");
 });

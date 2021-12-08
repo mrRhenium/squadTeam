@@ -146,16 +146,24 @@ submitBtnId.addEventListener("click", () => {
   }
 });
 
-// demo
-
 //animation is done by click on pofile btn
-document.querySelector(".footer").addEventListener("click", () => {
-  document
-    .querySelector(".matchContentPart2")
-    .classList.toggle("matchContentPart2Acive");
+document.querySelector("#profileBtnFooter").addEventListener("click", () => {
   document
     .querySelector(".currentPositionCover")
-    .classList.toggle("currentPositionCoverActive");
+    .classList.remove("currentPositionCoverActive");
+  document
+    .querySelector(".matchContentPart2")
+    .classList.remove("matchContentPart2Acive");
+});
+
+//animation is done by click on pofile btn
+document.querySelector("#listBtnFooter").addEventListener("click", () => {
+  document
+    .querySelector(".currentPositionCover")
+    .classList.add("currentPositionCoverActive");
+  document
+    .querySelector(".matchContentPart2")
+    .classList.add("matchContentPart2Acive");
 });
 
 //display the profile info on profile photo
