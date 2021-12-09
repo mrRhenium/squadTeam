@@ -29,8 +29,8 @@
   align-items: center;
   margin-bottom: 0.2rem;
   padding: 0 0.5rem;
-  width: auto;
-  height: 50%;
+  width: 90%;
+  height: 70%;
   border-radius: 50px;
   background-color: white;
 }
@@ -39,7 +39,7 @@
   justify-content: center;
   align-items: center;
   display: flex;
-  width: 85%;
+  width: auto;
   height: 100%;
   border: 0px solid red;
 }
@@ -68,7 +68,7 @@
   display: block;
   padding: 0.3rem;
   color: var(--clr);
-  font-size: 0.8rem;
+  font-size: 1.2rem;
   transition: 0.5s;
   transform: translateY(0rem);
   border: 0px solid red;
@@ -88,15 +88,15 @@
   position: absolute;
   display: block;
   color: var(--clr);
-  font-size: 0.7rem;
+  font-size: 1rem;
   letter-spacing: 0.05rem;
   transition: 0.5s;
   opacity: 0;
-  transform: translateY(3rem);
+  transform: translateY(3.5rem);
 }
 .navigator ul li.active a .iconText {
   opacity: 1;
-  transform: translateY(0.3rem);
+  transform: translateY(0.7rem);
 }
 /* .indicator {
   position: absolute;

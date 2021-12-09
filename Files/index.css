@@ -40,7 +40,7 @@
 }
 @media screen and (max-width: 700px) {
   .mobileCover {
-    width: 80%;
+    width: 85%;
     height: 100%;
   }
 }
@@ -53,15 +53,16 @@
 
 @media screen and (max-width: 450px) {
   html {
-    font-size: 90%;
+    font-size: 80%;
   }
 }
-
+/* 
 @media screen and (max-width: 370px) {
   html {
-    font-size: 85%;
+    font-size: 75%;
   }
-} /*
+}*/
+/*
 @media screen and (max-width: 300px) {
   html {
     font-size: 50%;

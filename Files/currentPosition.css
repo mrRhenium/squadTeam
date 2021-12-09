@@ -89,8 +89,8 @@
   margin: 0.5rem 0;
   margin-bottom: 0.9rem;
   width: 75%;
-  height: 30%;
-  min-height: 84px;
+  height: 25%;
+  min-height: 75px;
   border: 1px solid black;
   border-radius: 50px;
   background-color: rgba(225, 225, 225, 0.5);
@@ -99,6 +99,7 @@
 }
 .profileList a {
   color: black;
+  font-size: 0.9rem;
   letter-spacing: 0.1rem;
   font-family: "Exo", sans-serif;
   /* font-family: "IBM Plex Sans", sans-serif; */

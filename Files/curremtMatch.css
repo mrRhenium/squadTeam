@@ -119,7 +119,7 @@
 .currentMatchName a {
   color: orange;
   margin-top: 0.5rem;
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-family: "Baloo Bhaijaan 2", cursive;
   /* font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif; */
 }
@@ -136,7 +136,7 @@
 .currentMatchTime a {
   color: white;
   margin-top: 0.5rem;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-family: "Baloo Bhaijaan 2", cursive;
   /* font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif; */
 }
@@ -165,7 +165,7 @@ form {
 .winnerCover label {
   color: limegreen;
   margin-top: -0.5rem;
-  font-size: 1.7rem;
+  font-size: 2rem;
   font-family: "Baloo Bhaijaan 2", cursive;
   /* font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif; */
 }
@@ -194,6 +194,7 @@ form {
   background-color: rgba(225, 225, 225, 0.5);
 }
 .playerA label {
+  font-size: 2rem;
   font-family: "Baloo Bhaijaan 2", cursive;
 }
 .playerB {
@@ -210,6 +211,7 @@ form {
 }
 
 .playerB label {
+  font-size: 2rem;
   font-family: "Baloo Bhaijaan 2", cursive;
 }
 .playerwinnerName {
@@ -235,10 +237,12 @@ form {
   border: 0px solid red;
 }
 .playerInput input {
+  font-size: 1.4rem;
   color: black;
   border: 1px solid black;
   width: 3.5rem;
   height: 1.7rem;
+  /* padding: 0 1rem; */
   background-color: transparent;
   text-align: center;
   border-radius: 20px;
@@ -259,7 +263,7 @@ form {
   text-transform: uppercase;
   letter-spacing: 0.08rem;
   margin-top: 1rem;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   padding: 0.1rem 1rem;
   text-decoration: none;
   border: 2px solid white;
