@@ -150,20 +150,20 @@ submitBtnId.addEventListener("click", () => {
 document.querySelector("#profileBtnFooter").addEventListener("click", () => {
   document
     .querySelector(".currentPositionCover")
-    .classList.remove("currentPositionCoverActive");
+    .classList.add("currentPositionCoverActive");
   document
     .querySelector(".matchContentPart2")
-    .classList.remove("matchContentPart2Acive");
+    .classList.add("matchContentPart2Acive");
 });
 
 //animation is done by click on pofile btn
 document.querySelector("#listBtnFooter").addEventListener("click", () => {
   document
     .querySelector(".currentPositionCover")
-    .classList.add("currentPositionCoverActive");
+    .classList.remove("currentPositionCoverActive");
   document
     .querySelector(".matchContentPart2")
-    .classList.add("matchContentPart2Acive");
+    .classList.remove("matchContentPart2Acive");
 });
 
 //display the profile info on profile photo

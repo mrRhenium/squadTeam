@@ -1,3 +1,7 @@
+let DataForIndex = localStorage.getItem("tournament");
+DataForIndex = JSON.parse(DataForIndex);
+console.log(DataForIndex);
+
 const list = document.querySelectorAll(".list");
 const indicator = document.querySelector(".indicator");
 
@@ -25,4 +29,46 @@ function activeClass(e) {
 
 list.forEach((item) => {
   item.addEventListener("click", activeClass);
+});
+
+// fot footer icans
+const homeBtnFooter = document.querySelector("#homeBtnFooter");
+const listBtnFooter = document.querySelector("#listBtnFooter");
+const profileBtnFooter = document.querySelector("#profileBtnFooter");
+const historyBtnFooter = document.querySelector("#historyBtnFooter");
+
+homeBtnFooter.addEventListener("click", (e) => {
+  e.preventDefault();
+  if (/index.html/.test(window.location.href)) {
+    return console.log("index.html");
+  } else {
+    window.location.href = "../index.html";
+    console.log(window.location.href);
+  }
+});
+
+listBtnFooter.addEventListener("click", () => {
+  if (/squad.html/.test(window.location.href)) {
+    return console.log("squad.html");
+  } else if (/tournamentHistory.html/.test(window.location.href)) {
+    window.location.href = "squad.html";
+  } else {
+    if (DataForIndex) {
+      window.location.href = "Files/squad.html";
+    } else {
+      alert(
+        "Please !! \n Firstly Fill required info. in Input boxes \n Then click Next Button"
+      );
+    }
+  }
+});
+
+historyBtnFooter.addEventListener("click", () => {
+  if (/tournamentHistory.html/.test(window.location.href)) {
+    return console.log("tournamentHistory.html");
+  } else if (/squad.html/.test(window.location.href)) {
+    window.location.href = "tournamentHistory.html";
+  } else {
+    window.location.href = "Files/tournamentHistory.html";
+  }
 });

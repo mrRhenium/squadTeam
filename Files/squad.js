@@ -89,11 +89,10 @@ for (var i = 0; i < matchSquad.length; i++) {
     };
   } else if (!matchSquad[i].over) {
     startBtn[i].onclick = () => {
-      console.log(i + " wow ");
       window.location.href = `currentMatch.html`;
+      console.log(i + "start btn is clicked");
       // startBtn[i].setAttribute("href", "currentMatch.html");
     };
-
     break;
   }
 }

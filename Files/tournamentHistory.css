@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2&family=Exo:wght@500&family=IBM+Plex+Sans&family=Nunito+Sans:wght@700&family=Play&display=swap");
+
 .body {
   position: relative;
   display: flex;
@@ -42,8 +44,9 @@
   border: 1px solid white;
   background-color: rgba(226, 40, 233, 0.4);
   border-radius: 50px;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: "Play", sans-serif;
+  /* font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif; */
 }
 .tournamentProfileBody {
   position: relative;
@@ -111,6 +114,7 @@
 .tntProfItems a {
   display: block;
   color: black;
+  font-family: "Play", sans-serif;
   margin: 0.05rem 0.5rem;
   letter-spacing: 0.15rem;
   transform: translateX(1rem);
@@ -129,6 +133,7 @@
 }
 #speakingBtn a {
   color: white;
+  font-family: "Play", sans-serif;
 }
 #speakingBtn:hover {
   cursor: pointer;

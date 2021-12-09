@@ -75,10 +75,10 @@ addTeam.addEventListener("click", (e) => {
     }
     teamName.value = null;
     console.log(squad);
+  } else if (total == 0) {
+    alert("After fill the required fields");
   } else if (total == squad.length) {
     alert("Player Name is fullfilled !! ");
-  } else {
-    alert("After fill the required fields");
   }
 });
 
