@@ -45,7 +45,7 @@
   height: 78% /*20-80%*/;
   border: 0px solid red;
   overflow-y: scroll;
-  transition: 1s ease-in-out;
+  transition: 1s;
 }
 .matchContentAcive {
   height: 20%;

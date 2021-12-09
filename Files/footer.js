@@ -31,6 +31,12 @@ list.forEach((item) => {
   item.addEventListener("click", activeClass);
 });
 
+// its stop the calling of that
+// if (
+//   /index.html/.test(window.location.href) ||
+//   /Files\?squad.html/.test(window.location.href) ||
+//   /Files\?tournamentHisory.html/.test(window.location.href)
+// ) {
 // fot footer icans
 const homeBtnFooter = document.querySelector("#homeBtnFooter");
 const listBtnFooter = document.querySelector("#listBtnFooter");
@@ -52,6 +58,8 @@ listBtnFooter.addEventListener("click", () => {
     return console.log("squad.html");
   } else if (/tournamentHistory.html/.test(window.location.href)) {
     window.location.href = "squad.html";
+  } else if (/currentMatch.html/.test(window.location.href)) {
+    return console.log("squad.html");
   } else {
     if (DataForIndex) {
       window.location.href = "Files/squad.html";
@@ -72,3 +80,5 @@ historyBtnFooter.addEventListener("click", () => {
     window.location.href = "Files/tournamentHistory.html";
   }
 });
+console.log("hello");
+// }

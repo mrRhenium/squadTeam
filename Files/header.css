@@ -1,5 +1,6 @@
 * {
   border: 0px solid red;
+  user-select: none;
 }
 .header {
   position: relative;
@@ -9,7 +10,8 @@
   align-self: flex-start;
   width: 100%;
   height: 10%;
-  border: 1px solid #09aeff;
+  border-top: 1px solid #09aeff;
+  border-bottom: 1px solid #09aeff;
   background-color: rgba(0, 0, 0, 0.3);
 }
 .logoHeader {
@@ -24,7 +26,7 @@
 }
 .logoHeader img {
   width: 70%;
-  height: 80%;
+  height: 70%;
   border-radius: 50px;
 }
 .siteNameHeader {
