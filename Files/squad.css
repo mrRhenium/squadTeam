@@ -27,7 +27,7 @@
   color: white;
   padding: 0 1rem;
   letter-spacing: 0.1rem;
-  font-size: 2rem;
+  font-size: 2.3rem;
   font-family: "Play", sans-serif;
   /* font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif; */
@@ -84,7 +84,7 @@
 }
 .finalSquadCover a {
   color: white;
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   font-family: "Play", sans-serif;
   letter-spacing: 0.1rem;
   /* margin-top: -1rem; */
@@ -96,7 +96,7 @@
   background-color: rgba(45, 85, 205, 0.5);
 }
 .finalSquadCover a:hover {
-  font-size: 1.5rem;
+  font-size: 1.1rem;
 }
 
 .matchBoxes {
@@ -122,7 +122,7 @@
   display: block;
   color: black;
   margin-top: 0.5rem; /**/
-  font-size: 1.5rem; /*1.2*/
+  font-size: 1.6rem; /*1.2*/
   font-family: "Baloo Bhaijaan 2", cursive;
   /* font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", 
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;*/
@@ -205,11 +205,11 @@
   border-radius: 20px;
   background-color: transparent;
   color: white;
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
 .matchStartBtn #matchResult {
   color: white;
-  font-size: 1rem;
+  font-size: 1.5rem;
   /* padding: 0 0.5rem; */
   font-family: "Trebuchet MS", "Lucida Sans Unicode",
     "Lucida Grande" "Lucida Sans", Arial, sans-serif !important;

@@ -1,5 +1,5 @@
 * {
-  border: 0px solid red;
+  /* border: 0px solid red; */
   user-select: none;
 }
 .header {
@@ -41,7 +41,7 @@
   position: relative;
   display: block;
   color: white;
-  font-size: 1.7rem;
+  font-size: 1.2rem;
   font-family: "Play", sans-serif;
   text-decoration: none;
   font-weight: bolder;
@@ -50,7 +50,7 @@
 }
 .siteNameHeader #C {
   color: #09aeff;
-  font-size: 4rem;
+  font-size: 3rem;
   transform: translateX(0);
 }
 
