@@ -41,7 +41,7 @@
   position: relative;
   display: block;
   color: white;
-  font-size: 1.4rem;
+  font-size: 1.7rem;
   font-family: "Play", sans-serif;
   text-decoration: none;
   font-weight: bolder;
@@ -50,7 +50,7 @@
 }
 .siteNameHeader #C {
   color: #09aeff;
-  font-size: 3.1rem;
+  font-size: 4rem;
   transform: translateX(0);
 }
 
