@@ -35,6 +35,10 @@
 .profileHeading a {
   color: white;
   font-size: 1.8rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 0 2rem;
   font-family: "Play", sans-serif;
   /* font-family: "Nunito Sans", sans-serif; */
   /* font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",

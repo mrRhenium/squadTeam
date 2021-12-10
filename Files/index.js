@@ -46,6 +46,14 @@ gamePointBtn.addEventListener("click", (e) => {
 const squad = [];
 addTeam.addEventListener("click", (e) => {
   e.preventDefault();
+  // short the name to 6 letters due to prevent UI mash up
+  if (teamName.value.length > 8) {
+    var shortName = teamName.value;
+    teamName.value = shortName.toString().substring(0, 8);
+    teamName.value += ".";
+    console.log(teamName.value + "..");
+  }
+
   if (teamName.value != "" && total != 0) {
     // check the all entered  name is unique or not
     let validName = true;
@@ -85,7 +93,7 @@ addTeam.addEventListener("click", (e) => {
 // Go to the next page of our application
 nextBtn.addEventListener("click", (e) => {
   // e.preventDefault();
-  if (total != 0 && squad.length == total) {
+  if (total != 0 && squad.length == total && points.value != 0) {
     // squad making process-start
 
     // Set the player profile as a object

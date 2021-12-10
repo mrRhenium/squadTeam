@@ -19,7 +19,7 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 30%;
+  width: 35%;
   height: 100%;
   border-left: 1px solid #09aeff;
   border-right: 1px solid #09aeff;
@@ -42,21 +42,21 @@
     transform: translateY(-1.3rem) !important;
   }
   .currentMatchName a {
-    font-size: 2.1rem !important;
+    font-size: 1.9rem !important;
   }
   .matchStartBtn,
   #matchResult {
-    font-size: 0.9rem !important;
+    font-size: 1.1rem !important;
   }
   .matchTeamName a,
   .matchCategory a {
-    font-size: 1.4rem !important;
+    font-size: 1.3rem !important;
   }
 }
 
 @media screen and (max-width: 1130px) {
   .mobileCover {
-    width: 40%;
+    width: 45%;
     height: 100%;
   }
   .matchHeading a {
@@ -65,16 +65,13 @@
 }
 @media screen and (max-width: 1000px) {
   .mobileCover {
-    width: 50%;
+    width: 60%;
     height: 100%;
-  }
-  .currentMatchName a {
-    font-size: 2.3rem !important;
   }
 }
 @media screen and (max-width: 750px) {
   .mobileCover {
-    width: 70%;
+    width: 75%;
     height: 100%;
   }
   .matchStartBtn,
@@ -98,6 +95,13 @@
     font-size: 1rem !important;
     font-weight: bold;
   }
+  .matchTeamName a,
+  .matchCategory a {
+    font-size: 1.1rem !important;
+  }
+  .currentMatchName a {
+    font-size: 1.8rem !important;
+  }
 }
 @media screen and (max-width: 500px) {
   html {
@@ -120,7 +124,7 @@
     font-size: 4.5rem !important;
   }
   .currentMatchName a {
-    font-size: 2.4rem !important;
+    font-size: 2.3rem !important;
   }
 
   .matchStartBtn,
@@ -129,7 +133,7 @@
   }
   .matchTeamName a,
   .matchCategory a {
-    font-size: 1.6rem !important;
+    font-size: 1.5rem !important;
   }
   .profileList a {
     font-size: 1.1rem !important;
@@ -166,13 +170,41 @@
   .siteNameHeader #C {
     font-size: 3.8rem !important;
   }
+  .matchTeamName a,
+  .matchCategory a {
+    font-size: 1.4rem !important;
+  }
   .matchStartBtn,
   #matchResult {
+    font-size: 1.2rem !important;
+  }
+  .matchStartBtn button {
+    font-size: 1rem;
+  }
+  .currentMatchName a {
+    font-size: 2.1rem !important;
+  }
+}
+@media screen and (max-width: 430px) {
+  .matchTeamName a,
+  .matchCategory a {
     font-size: 1.3rem !important;
+  }
+  .currentMatchName a {
+    font-size: 2rem !important;
+  }
+}
+@media screen and (max-width: 400px) {
+  .matchTeamName a,
+  .matchCategory a {
+    font-size: 1.2rem !important;
+  }
+  .currentMatchName a {
+    font-size: 1.8rem !important;
   }
 }
 
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 370px) {
   html {
     font-size: 70%;
   }
@@ -189,7 +221,7 @@
     font-size: 4rem !important;
   }
   .currentMatchName a {
-    font-size: 2.5rem !important;
+    font-size: 1.8rem !important;
   }
   .matchStartBtn,
   #matchResult {
@@ -198,6 +230,10 @@
   .profileList a {
     font-size: 1.2rem !important;
     font-weight: bold;
+  }
+  .matchTeamName a,
+  .matchCategory a {
+    font-size: 1.3rem !important;
   }
 }
 /*

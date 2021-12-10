@@ -30,7 +30,7 @@ const matchBoxesHeading = document.querySelectorAll(".matchBoxesHeading");
 Data.matchSquad.filter((item, index) => {
   if (item.matchCategory != "normal") {
     matchBoxesHeading[index].innerHTML = `<div class="matchCategory">
-    <a style="font-size: 1rem;margin-top:0.1rem;color:royalblue">${item.matchCategory}</a>
+    <a style="font-size: 1rem;margin-top:0.2rem;color:royalblue">${item.matchCategory}</a>
   </div>
   <div class="matchTeamName">
     <a>${item.TeamName1} vs ${item.TeamName2}</a>
