@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TEAM MAKING WEBSITE</title>
+    <title>Display Current Match</title>
     <link rel="icon" href="images/icon4.jpg" />
-    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="webContainer.css" />
     <link rel="stylesheet" href="header.css" />
     <link rel="stylesheet" href="curremtMatch.css" />
     <link rel="stylesheet" href="currentPosition.css" />
@@ -35,7 +35,7 @@
         <!-- boby part start -->
         <div class="body">
           <div class="matchHeading"><a>Match Records</a></div>
-          <div class="matchContentPart2">
+          <div class="matchContent">
             <div class="currentMatch">
               <div class="currentMatchHeading">
                 <div class="currentMatchName">
@@ -91,13 +91,24 @@
           <!-- profile start -->
           <div class="currentPositionCover">
             <div class="profileHeading">
-              <a style="color: #09aeff">Player's Profile</a>
+              <div class="headingName">
+                <a style="color: #09aeff">Player's Profile</a>
+              </div>
+              <div class="headingOptions">
+                <a id="optionsLabel">According to Matches</a>
+                <button id="showProfileBtn">Show</button>
+              </div>
             </div>
             <div class="allProfile">
               <!-- <div class="profileList">
                 <span><a>Position-1</a></span>
                 <span><a>Nitesh</a></span>
                 <span><a>Current Points - 9</a></span>
+              </div>
+              <div class="profileListWinMatches">
+                <span><a>Position-1</a></span>
+                <span><a>Nitesh</a></span>
+                <span><a>Matches: Win-(3) || lose-(1)</a></span>
               </div> -->
             </div>
           </div>
@@ -128,7 +139,7 @@
               <li class="list profile">
                 <a id="profileBtnFooter">
                   <sapn class="icon"
-                    ><i class="fa fa-user" aria-hidden="true"></i
+                    ><i class="fa fa-users" aria-hidden="true"></i
                   ></sapn>
                   <sapn class="iconText">Profile</sapn>
                 </a>
@@ -141,6 +152,14 @@
                   <sapn class="iconText">History</sapn>
                 </a>
               </li>
+              <li class="list history" style="display: none">
+                <a id="settingBtnFooter" style="display: none">
+                  <sapn class="icon"
+                    ><i class="fa fa-cogs" aria-hidden="true"></i>
+                  </sapn>
+                  <sapn class="iconText">Setting</sapn>
+                </a>
+              </li>
             </ul>
           </div>
         </footer>
@@ -149,5 +168,6 @@
     </div>
     <script src="currentMatch.js"></script>
     <script src="footer.js"></script>
+    <script src="showPlayersProfile.js"></script>
   </body>
 </html>

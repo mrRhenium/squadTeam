@@ -4,11 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Display the tournament Profile</title>
+    <title>Setting</title>
     <link rel="icon" href="images/icon4.jpg" />
     <link rel="stylesheet" href="webContainer.css" />
     <link rel="stylesheet" href="header.css" />
-    <link rel="stylesheet" href="tournamentHistory.css" />
+    <link rel="stylesheet" href="setting.css" />
     <link rel="stylesheet" href="footer.css" />
     <link
       rel="stylesheet"
@@ -20,44 +20,25 @@
       <div class="mobileCover">
         <!-- Header part start -->
         <header class="header">
-          <div class="logoHeader"><img src="images/icon4.jpg" alt="" /></div>
+          <div class="logoHeader">
+            <img src="images/icon4.jpg" alt="" />
+          </div>
           <div class="siteNameHeader">
             <a id="C">C</a>
-            <a href="../index.html">hampionShip-75</a>
+            <a href="./">hampionShip-75</a>
           </div>
-          <div class="imgHeader"><img src="images/icon2.jpg" alt="" /></div>
+          <div class="imgHeader">
+            <img src="images/indexIcon.jpg" alt="" />
+          </div>
         </header>
         <!-- Header part over -->
 
         <!-- boby part start -->
         <div class="body">
-          <div class="tournamentProfileCover">
-            <div class="tournamentProfileHeading">
-              <a>Tournament History</a>
-            </div>
-            <div class="tournamentProfileBody">
-              <!-- <div class="tournamentProfileList">
-                <span class="tntProfItems" style="width: 90%; padding: 0.1rem">
-                  <a style="transform: translateX(0rem); margin: 0 0"
-                    >2021-12-07</a
-                  ></span
-                >
-                <span class="tntProfItems itemFlexbox">
-                  <a id="rankItems">1.</a>
-                  <a>Nitesh</a>
-                  <a>Points : 9</a>
-                </span>
-                <span
-                  class="tntProfItems"
-                  style="min-height: 45px; width: 30%"
-                  id="speakingBtn"
-                  ><a id="speakingBtnValue" style="margin: 0; transform: translateX(0)"
-                    >Speak</a
-                  ></span
-                > 
-              </div>-->
-            </div>
+          <div class="settingHeader">
+            <a>Setting Page</a>
           </div>
+          <div class="settingContent"></div>
         </div>
         <!-- boby part over -->
 
@@ -72,9 +53,8 @@
                   ></sapn>
                   <sapn class="iconText">Home</sapn>
                 </a>
-                <!-- <div class="indicator"></div> -->
               </li>
-              <li class="list List">
+              <li class="list List" style="display: none">
                 <a id="listBtnFooter">
                   <sapn class="icon"
                     ><i class="fa fa-list-alt" aria-hidden="true"></i>
@@ -82,15 +62,7 @@
                   <sapn class="iconText">list</sapn>
                 </a>
               </li>
-              <!-- <li class="list profile">
-                <a href="">
-                  <sapn class="icon"
-                    ><i class="fa fa-user" aria-hidden="true"></i
-                  ></sapn>
-                  <sapn class="iconText">Profile</sapn>
-                </a>
-              </li> -->
-              <li class="list active history">
+              <li class="list history" style="display: none">
                 <a id="historyBtnFooter">
                   <sapn class="icon"
                     ><i class="fa fa-book" aria-hidden="true"></i>
@@ -98,7 +70,7 @@
                   <sapn class="iconText">History</sapn>
                 </a>
               </li>
-              <li class="list setting">
+              <li class="list active setting">
                 <a id="settingBtnFooter">
                   <sapn class="icon"
                     ><i class="fa fa-cogs" aria-hidden="true"></i>
@@ -112,7 +84,7 @@
         <!-- footer part over -->
       </div>
     </div>
-    <script src="tournamentHistory.js"></script>
+    <script src="setting.js"></script>
     <script src="footer.js"></script>
   </body>
 </html>

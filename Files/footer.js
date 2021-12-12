@@ -1,6 +1,6 @@
 let DataForIndex = localStorage.getItem("tournament");
 DataForIndex = JSON.parse(DataForIndex);
-console.log(DataForIndex);
+// console.log(DataForIndex);
 
 const list = document.querySelectorAll(".list");
 const indicator = document.querySelector(".indicator");
@@ -37,11 +37,11 @@ list.forEach((item) => {
 //   /Files\?squad.html/.test(window.location.href) ||
 //   /Files\?tournamentHisory.html/.test(window.location.href)
 // ) {
-// fot footer icans
 const homeBtnFooter = document.querySelector("#homeBtnFooter");
 const listBtnFooter = document.querySelector("#listBtnFooter");
 const profileBtnFooter = document.querySelector("#profileBtnFooter");
 const historyBtnFooter = document.querySelector("#historyBtnFooter");
+const settingBtnFooter = document.querySelector("#settingBtnFooter");
 
 homeBtnFooter.addEventListener("click", (e) => {
   e.preventDefault();
@@ -80,5 +80,13 @@ historyBtnFooter.addEventListener("click", () => {
     window.location.href = "Files/tournamentHistory.html";
   }
 });
-console.log("hello");
-// }
+
+settingBtnFooter.addEventListener("click", () => {
+  if (/setting.html/.test(window.location.href)) {
+    return console.log("tournamentHistory.html");
+  } else if (/tournamentHistory.html/.test(window.location.href)) {
+    window.location.href = "setting.html";
+  } else {
+    window.location.href = "Files/setting.html";
+  }
+});

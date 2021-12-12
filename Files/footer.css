@@ -41,12 +41,13 @@
   display: flex;
   width: auto;
   height: 100%;
+  padding: 0 0.5rem;
   border: 0px solid red;
 }
 .navigator ul li {
   position: relative;
   display: flex;
-  margin: 0 1.7rem;
+  margin: 0 1.5rem;
   width: 25%;
   height: 100%;
   border: 0px solid red;
@@ -93,5 +94,5 @@
 }
 .navigator ul li.active a .iconText {
   opacity: 1;
-  transform: translateY(0.7rem);
+  transform: translateY(0.5rem);
 }

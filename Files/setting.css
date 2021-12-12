@@ -1,0 +1,42 @@
+.body {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 80%;
+  border: 0px solid red;
+  /* background-image: url(images/ocean.jpeg);
+ background-position: center;
+ background-size: cover;
+ background-repeat: repeat; */
+}
+.settingHeader {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 15%;
+  border: 1px solid red;
+}
+.settingHeader a {
+  color: white;
+  padding: 0.2rem 2rem;
+  font-size: 2.2rem;
+  font-family: "Play", sans-serif;
+  font-weight: bolder;
+  border: 1px solid white;
+  border-radius: 50px;
+  background-color: rgba(252, 125, 6, 0.5);
+}
+.settingContent {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 85%;
+  border: 1px solid white;
+}

@@ -1,244 +1,167 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2&family=Exo:wght@500&family=IBM+Plex+Sans&family=Nunito+Sans:wght@700&family=Play&display=swap");
+
+.body {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 80%;
+  border: 0px solid red;
+  background-image: url(images/ocean.jpeg);
+  background-position: center;
+  background-size: cover;
+  /* background-position-y: -4rem; */
+  /* background-position-x: 2rem;  */
+  background-repeat: repeat;
 }
-.container {
+.headingBody {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100vh;
+  height: 15%;
   border: 0px solid red;
-  background-color: rgba(0, 0, 0, 0.7);
-  overflow: hidden;
 }
-.mobileCover {
+.headingBody a {
+  color: white;
+  /* margin-top: 1.5rem; */
+  padding: 0 2rem;
+  font-size: 2.2rem;
+  font-family: "Play", sans-serif;
+  /* font-family: "Franklin Gothic Medium", "Arial ", Arial, sans-serif; */
+  /* font-family: "Nunito Sans", sans-serif; */
+  font-weight: bolder;
+  border: 1px solid white;
+  border-radius: 50px;
+  background-color: rgba(45, 85, 205, 0.5);
+}
+.contentBody {
   position: relative;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  /* padding: 0.5rem 0; */
+  width: 100%;
+  height: 85%;
+  border: 0px solid white;
+  /* overflow-y: scroll; */
+}
+form {
+  width: 85%;
+  height: 85%;
+  min-height: 300px;
+  border: 1px solid white;
+  border-radius: 50px;
+  background-color: rgba(225, 225, 225, 0.5);
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  border: 1px solid black;
+  backdrop-filter: blur(5px);
+  z-index: 200;
+}
+.formElement {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 35%;
+  width: 100%;
+  height: 28%;
+  border: 0px solid white;
+}
+.formElementHeading {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50%;
+  border: 0px solid white;
+}
+.formElementHeading a {
+  color: white;
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+  padding: 0.05rem 1rem;
+  border-radius: 50px;
+  border: 1px solid white;
+  background-color: rgba(23, 236, 4, 0.5);
+  font-family: "Play", sans-serif;
+  /*font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif; */
+}
+.formElementBody {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 50%;
+  border: 0px solid white;
+}
+.formBodyInput {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
   height: 100%;
-  border-left: 1px solid #09aeff;
-  border-right: 1px solid #09aeff;
-  background-image: url(images/ocean.jpeg);
+  border: 0px solid white;
 }
-@media screen and (max-width: 1500px) {
-  html {
-    font-size: 95%;
-  }
-  .navigator ul li a .icon {
-    font-size: 0.8rem !important;
-  }
-  .navigator ul li a .iconText {
-    font-size: 1.1rem !important;
-  }
-  .navigator ul li.active a .iconText {
-    transform: translateY(0.5rem) !important;
-  }
-  .navigator ul li.active a .icon {
-    transform: translateY(-1.3rem) !important;
-  }
-  .currentMatchName a {
-    font-size: 1.9rem !important;
-  }
-  .matchStartBtn,
-  #matchResult {
-    font-size: 1.1rem !important;
-  }
-  .matchTeamName a,
-  .matchCategory a {
-    font-size: 1.3rem !important;
-  }
+.formBodyInput input {
+  color: white;
+  width: 50%;
+  height: 50%;
+  min-height: 28px;
+  border: 1px solid black;
+  text-align: center;
+  border-radius: 50px;
+  background-color: rgba(3, 196, 230, 0.5);
 }
+.formBodyInput input::placeholder {
+  color: white;
+}
+.formBodyBtn {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  border: 0px solid white;
+}
+.formBodyBtn .saveBtn,
+.formBodyBtn .addBtn,
+.formBodyBtn .gamePointBtn {
+  color: white;
+  width: 5rem;
+  height: 1.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  background-color: transparent;
+  background-color: rgba(3, 196, 230, 0.5);
 
-@media screen and (max-width: 1130px) {
-  .mobileCover {
-    width: 45%;
-    height: 100%;
-  }
-  .matchHeading a {
-    font-size: 1.7rem !important;
-  }
+  border-radius: 50px;
 }
-@media screen and (max-width: 1000px) {
-  .mobileCover {
-    width: 60%;
-    height: 100%;
-  }
+.formBodyBtn .saveBtn:hover,
+.formBodyBtn .addBtn:hover,
+.formBodyBtn .gamePointBtn:hover {
+  transform: scale(0.9);
 }
-@media screen and (max-width: 750px) {
-  .mobileCover {
-    width: 75%;
-    height: 100%;
-  }
-  .matchStartBtn,
-  #matchResult {
-    font-size: 1.2rem !important;
-  }
-  .profileList a {
-    font-size: 0.95rem !important;
-    font-weight: bold;
-  }
+.formElement .nextBtn {
+  color: white;
+  font-family: "Play", sans-serif;
+  padding: 0 1.5rem;
+  font-size: 2rem;
+  text-decoration: none;
+  border: 1px solid white;
+  background-color: rgba(45, 85, 205, 0.5);
+  border-radius: 50px;
 }
-@media screen and (max-width: 700px) {
-  html {
-    font-size: 90%;
-  }
-  .mobileCover {
-    width: 80%;
-    height: 100%;
-  }
-  .profileList a {
-    font-size: 1rem !important;
-    font-weight: bold;
-  }
-  .matchTeamName a,
-  .matchCategory a {
-    font-size: 1.1rem !important;
-  }
-  .currentMatchName a {
-    font-size: 1.8rem !important;
-  }
+.formElement .nextBtn:hover {
+  color: #0fffff;
+  font-size: 1.8rem;
+  cursor: pointer;
 }
-@media screen and (max-width: 500px) {
-  html {
-    font-size: 80%;
-  }
-  .mobileCover {
-    width: 100%;
-    height: 100%;
-  }
-  .formElementHeading a {
-    font-size: 1.5rem !important;
-  }
-  .headingBody a {
-    font-size: 2.7rem !important;
-  }
-  .siteNameHeader a {
-    font-size: 1.7rem !important;
-  }
-  .siteNameHeader #C {
-    font-size: 4.5rem !important;
-  }
-  .currentMatchName a {
-    font-size: 2.3rem !important;
-  }
-
-  .matchStartBtn,
-  #matchResult {
-    font-size: 1.5rem !important;
-  }
-  .matchTeamName a,
-  .matchCategory a {
-    font-size: 1.5rem !important;
-  }
-  .profileList a {
-    font-size: 1.1rem !important;
-    font-weight: bold;
-  }
-
-  .navigator ul li a .icon {
-    font-size: 1.3rem !important;
-  }
-  .navigator ul li a .iconText {
-    font-size: 1.2rem !important;
-  }
-  .navigator ul li.active a .iconText {
-    transform: translateY(0.5rem) !important;
-  }
-  .navigator ul li.active a .icon {
-    transform: translateY(-1.3rem) !important;
-  }
-}
-
-@media screen and (max-width: 450px) {
-  html {
-    font-size: 80%;
-  }
-  .formElementHeading a {
-    font-size: 1.5rem !important;
-  }
-  .headingBody a {
-    font-size: 2.5rem !important;
-  }
-  .siteNameHeader a {
-    font-size: 1.4rem !important;
-  }
-  .siteNameHeader #C {
-    font-size: 3.8rem !important;
-  }
-  .matchTeamName a,
-  .matchCategory a {
-    font-size: 1.4rem !important;
-  }
-  .matchStartBtn,
-  #matchResult {
-    font-size: 1.2rem !important;
-  }
-  .matchStartBtn button {
-    font-size: 1rem;
-  }
-  .currentMatchName a {
-    font-size: 2.1rem !important;
-  }
-}
-@media screen and (max-width: 430px) {
-  .matchTeamName a,
-  .matchCategory a {
-    font-size: 1.3rem !important;
-  }
-  .currentMatchName a {
-    font-size: 2rem !important;
-  }
-}
-@media screen and (max-width: 400px) {
-  .matchTeamName a,
-  .matchCategory a {
-    font-size: 1.2rem !important;
-  }
-  .currentMatchName a {
-    font-size: 1.8rem !important;
-  }
-}
-
-@media screen and (max-width: 370px) {
-  html {
-    font-size: 70%;
-  }
-  .siteNameHeader a {
-    font-size: 1.4rem !important;
-  }
-  .siteNameHeader #C {
-    font-size: 3rem !important;
-  }
-  .siteNameHeader a {
-    font-size: 1.4rem !important;
-  }
-  .siteNameHeader #C {
-    font-size: 4rem !important;
-  }
-  .currentMatchName a {
-    font-size: 1.8rem !important;
-  }
-  .matchStartBtn,
-  #matchResult {
-    font-size: 1.2rem !important;
-  }
-  .profileList a {
-    font-size: 1.2rem !important;
-    font-weight: bold;
-  }
-  .matchTeamName a,
-  .matchCategory a {
-    font-size: 1.3rem !important;
-  }
-}
-/*
-@media screen and (max-width: 300px) {
-  html {
-    font-size: 50%;
-  }
-} */
