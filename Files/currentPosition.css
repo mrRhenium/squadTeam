@@ -59,7 +59,7 @@
   align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 70%;
+  width: 80%;
   height: 50%;
   border: 0px solid red;
 }
@@ -164,6 +164,7 @@
 .profileListWinMatches a {
   color: black;
   font-size: 0.9rem;
+  font-weight: bolder;
   letter-spacing: 0.1rem;
   font-family: "Exo", sans-serif;
   /* font-family: "IBM Plex Sans", sans-serif; */

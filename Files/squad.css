@@ -27,10 +27,8 @@
   color: white;
   padding: 0 1rem;
   letter-spacing: 0.1rem;
-  font-size: 2.3rem;
+  font-size: 2rem;
   font-family: "Play", sans-serif;
-  /* font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif; */
   border: 1px solid white;
   border-radius: 50px;
   background-color: rgba(45, 85, 205, 0.5);
@@ -94,9 +92,11 @@
   border-radius: 20px;
   cursor: pointer;
   background-color: rgba(45, 85, 205, 0.5);
+  box-shadow: 1px 2px 2px white;
 }
 .finalSquadCover a:hover {
   font-size: 1.1rem;
+  box-shadow: 0px 0px 5px white;
 }
 
 .matchBoxes {
@@ -109,25 +109,46 @@
   height: 17%; /*20*/
   min-height: 70px;
   border-radius: 50px;
-  background-color: rgba(225, 225, 225, 0.5);
+  background-color: rgba(225, 225, 225, 0.4);
   box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
   border: 1px solid black;
   backdrop-filter: blur(5px);
+  overflow: hidden;
   /* filter: blur(0.1px); */
 }
 
 .matchTeamName a,
 .matchCategory a {
-  /* text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap; */
-  padding: 1rem 1rem;
-  /* z-index: 20; */
   display: block;
   color: black;
+  font-size: 1.5rem; /*1.2*/
   margin-top: 0.5rem; /**/
-  font-size: 1.6rem; /*1.2*/
+  padding: 1rem 1rem;
   font-family: "Baloo Bhaijaan 2", cursive;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.rematchBtn {
+  position: absolute;
+  display: flex;
+  border: 0px solid red;
+  text-align: center;
+}
+
+.rematchBtn i {
+  display: flex;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  overflow: visible;
+}
+.rematchBtn:hover i {
+  font-size: 0.7rem;
+}
+.rematchDisable i {
+  display: none;
 }
 .matchBoxesHeading {
   position: relative;
@@ -169,30 +190,9 @@
   border: 0px solid white;
 }
 .matchStartBtn i {
-  /* position: absolute; */
-  /* transform: translateX(-100%); */
   color: white;
   font-size: 1rem;
-  margin-right: -0rem;
-}
-.rematchBtn {
-  position: absolute;
-  transform: translateX(100%);
-}
-.rematchBtn i {
-  position: relative;
-  color: white;
-  font-size: 0.8rem;
-  cursor: pointer;
-  /* display: flex; */
-  /* margin-left: 4.2rem; */
-  /* margin-top: -1.7rem; */
-}
-.rematchBtn:hover i {
-  font-size: 0.7rem;
-}
-.rematchDisable i {
-  display: none;
+  margin-right: -0.5rem;
 }
 .matchStartBtn {
   position: relative;
@@ -206,22 +206,20 @@
 .matchStartBtn button {
   transform: scale(1.1);
   width: 3rem;
-  /* padding: 0 -0.5rem; */
   cursor: pointer;
   margin-top: 0rem;
   border-radius: 20px;
   background-color: transparent;
   color: white;
+  /* padding: 0 -0.5rem; */
   /* border: 1px solid black; */
 }
 .matchStartBtn #matchResult {
   color: white;
+  padding: 1rem 1.5rem;
+  font-size: 1.2rem;
+  padding: 0 1rem;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
-  padding: 1rem 1.5rem;
-  font-size: 1.7rem;
-  padding: 0 1rem;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode",
-    "Lucida Grande" "Lucida Sans", Arial, sans-serif !important;
 }

@@ -18,9 +18,12 @@ if (setting[0].tournamentRankingType.byPoints) {
   let tournamentHistory = localStorage.getItem("tournamentHistory");
   tournamentHistory = JSON.parse(tournamentHistory);
   console.log(tournamentHistory);
+  //
 
   // we define the playerRank array which is merge in tournament History json file after the whole match is over
-  const playerRank = [{ date: new Date().toISOString() }];
+  const playerRank = [
+    { date: new Date().toISOString(), tournamentType: "By Points" },
+  ];
   console.log(playerRank[0]);
 
   // we targeting the finalPage btn in squad html page for adding clicking functionality for diffrent type of perpose

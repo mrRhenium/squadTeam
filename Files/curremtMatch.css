@@ -34,8 +34,6 @@
   padding: 0 2.5rem;
   letter-spacing: 0.05rem;
   font-family: "Play", sans-serif;
-  /* font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif; */
   border: 2px solid white;
   border-radius: 50px;
   background-color: rgba(0, 0, 0, 0.7);
@@ -118,9 +116,11 @@
 .currentMatchName a {
   color: orange;
   margin-top: 0.5rem;
-  font-size: 2.7rem;
+  font-size: 2rem;
   font-family: "Baloo Bhaijaan 2", cursive;
-  /* font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif; */
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .currentMatchTime {
   position: relative;
@@ -137,7 +137,6 @@
   margin-top: 0.5rem;
   font-size: 1.8rem;
   font-family: "Baloo Bhaijaan 2", cursive;
-  /* font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif; */
 }
 .currentMatchBody {
   position: relative;
@@ -166,7 +165,6 @@ form {
   margin-top: -0.5rem;
   font-size: 2rem;
   font-family: "Baloo Bhaijaan 2", cursive;
-  /* font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif; */
 }
 .playerNameCover {
   position: relative;
@@ -179,7 +177,8 @@ form {
   height: 40%;
   border: 0px solid red;
 }
-.playerA {
+.playerA,
+.playerB {
   position: relative;
   display: flex;
   justify-content: center;
@@ -192,26 +191,13 @@ form {
   border-radius: 50px;
   background-color: rgba(225, 225, 225, 0.5);
 }
-.playerA label {
-  font-size: 2rem;
-  font-family: "Baloo Bhaijaan 2", cursive;
-}
-.playerB {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem;
-  width: 90%;
-  height: 50%;
-  border: 1px solid white;
-  border-radius: 50px;
-  background-color: rgba(225, 225, 225, 0.5);
-}
-
+.playerA label,
 .playerB label {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-family: "Baloo Bhaijaan 2", cursive;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .playerwinnerName {
   position: relative;
@@ -221,10 +207,6 @@ form {
   width: 60%;
   height: 100%;
   border: 0px solid red;
-}
-.playerwinnerName {
-  color: black;
-  font-size: 1.5rem;
 }
 .playerInput {
   position: relative;
@@ -241,7 +223,6 @@ form {
   border: 1px solid black;
   width: 3.5rem;
   height: 1.7rem;
-  /* padding: 0 1rem; */
   background-color: transparent;
   text-align: center;
   border-radius: 20px;
@@ -271,5 +252,5 @@ form {
   background-color: rgba(23, 236, 4, 0.5);
 }
 .submitBtn a:hover {
-  font-size: 1rem;
+  font-size: 1.4rem;
 }
