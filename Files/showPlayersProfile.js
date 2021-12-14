@@ -25,6 +25,7 @@ showProfileBtn.addEventListener("click", () => {
 document.querySelector("#profileBtnFooter").addEventListener("click", () => {
   //display and updating the profile array again because any user click on rematch btn so current position of player again changed
   const allProfile = document.querySelector(".allProfile");
+  console.log(Data.playersPositionAccordingToPoints);
   Data.playersPositionAccordingToPoints.map((item) => {
     return (allProfile.innerHTML += `<div class="profileList">
   <span><a> Position - ${item.rank + 1}</a></span>
@@ -37,9 +38,7 @@ document.querySelector("#profileBtnFooter").addEventListener("click", () => {
     return (allProfile.innerHTML += `<div class="profileListWinMatches">
   <span><a> Position - ${item.rank + 1}</a></span>
   <span><a>${item.name}</a></span>
-  <span><a>Matches: Win-(${item.winMatches}) || Lose-(${
-      item.loseMatches
-    })</a></span>
+  <span><a>Matches: Win-(${item.win}) || Lose-(${item.lose})</a></span>
   </div>`);
   });
 

@@ -150,8 +150,8 @@ if (setting[0].tournamentRankingType.byPoints) {
             name: item.name,
             rank: index,
             points: item.points,
-            winMatches: item.winMatches,
-            loseMatches: item.loseMatches,
+            winMatches: item.win,
+            loseMatches: item.lose,
           });
         }
       });

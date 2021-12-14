@@ -10,8 +10,8 @@ let setting = [
   {
     sound: true,
     tournamentRankingType: {
-      byPoints: false,
-      byWinningMatches: true,
+      byPoints: true,
+      byWinningMatches: false,
     },
   },
 ];
@@ -147,7 +147,6 @@ addTeam.addEventListener("click", (e) => {
         totalPoints: 0,
         winMatches: 0,
         loseMatches: 0,
-        position: "0", //position is define because it helps in sorting algorithm in current match html page
       };
 
       // display in header part for ensuring that how much player have added in array for tournament
@@ -190,16 +189,16 @@ nextBtn.addEventListener("click", (e) => {
   if (total != 0 && squad.length == total && points.value != 0) {
     // squad making process-start
 
-    // Set the player profile as a object
-    const playerProfile = [];
-    squad.map((item, index) => {
-      playerProfile[index] = {
-        id: index,
-        name: item,
-      };
-    });
-    console.log(playerProfile);
-    console.log(squad);
+    // // Set the player profile as a object
+    // const playerProfile = [];
+    // squad.map((item, index) => {
+    //   playerProfile[index] = {
+    //     id: index,
+    //     name: item,
+    //   };
+    // });
+    // console.log(playerProfile);
+    // console.log(squad);
 
     //  this algorithm is set the palyers normal match with each other accoding to the setting value in our code
     let matchSquad = [];
@@ -210,7 +209,6 @@ nextBtn.addEventListener("click", (e) => {
           TeamName2: `${squad[j].name}`,
           matchCategory: "normal",
           over: false,
-          rematch: true,
         };
       }
     }

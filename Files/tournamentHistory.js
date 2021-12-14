@@ -26,6 +26,8 @@ for (var i = 0; i < tournamentList.length; i++) {
       ].innerHTML += `<span class="tntProfItems itemFlexbox">
    <a id="rankItems">${item.rank + 1}.</a>
    <a>${item.name}</a>
+   <a>Win-(${item.winMatches})</a>
+   <a>Lose-(${item.loseMatches})</a>
    <a>Points : ${item.points}</a> </span>`;
     }
   });
