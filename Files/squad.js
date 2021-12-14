@@ -137,31 +137,3 @@ if (Data.remainingMatches < 0) {
     }
   }
 }
-
-//
-//
-// //display the profile info on profile UI/UX part of the application in squad and currentMatch html page
-// const allProfile = document.querySelector(".allProfile");
-// Data.playersPositionAccordingToPoints.map((item) => {
-//   return (allProfile.innerHTML += `<div class="profileList">
-//   <span><a> Position - ${item.rank + 1}</a></span>
-//   <span><a>${item.name}</a></span>
-//   <span><a>Current Points : ${item.points}</a></span>
-// </div>`);
-// });
-
-// //animation is done by click on pofile btn
-// document.querySelector("#listBtnFooter").addEventListener("click", () => {
-//   document
-//     .querySelector(".currentPositionCover")
-//     .classList.remove("currentPositionCoverActive");
-//   document.querySelector(".matchContent").classList.remove("matchContentAcive");
-// });
-
-// //animation is done by click on pofile btn
-// document.querySelector("#profileBtnFooter").addEventListener("click", () => {
-//   document
-//     .querySelector(".currentPositionCover")
-//     .classList.add("currentPositionCoverActive");
-//   document.querySelector(".matchContent").classList.add("matchContentAcive");
-// });

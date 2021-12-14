@@ -15,7 +15,7 @@ const tournamentProfileBody = document.querySelector(".tournamentProfileBody");
 tournamentList.map((item) => {
   tournamentProfileBody.innerHTML += `<div class="tournamentProfileList">
   <span class="tntProfItems" style="width: 90%; padding: 0.1rem;background-color: rgba(226, 35, 10, 0.5);border:1px solid white">
-  <a style="transform: translateX(0rem); margin: 0 0;color:white;font-size:1.2rem"
+  <a style="transform: translateX(0rem); margin: 0 0;color:white;font-size:1rem"
  >Ranking - ${item[0].tournamentType}</a></span>
 
   <span class="tntProfItems" style="width: 60%; padding: 0.1rem;background-color: rgba(23, 236, 4, 0.5);border:1px solid white">
@@ -35,7 +35,7 @@ for (var i = 0; i < tournamentList.length; i++) {
         i
       ].innerHTML += `<span class="tntProfItems itemFlexbox">
    <a id="rankItems">${item.rank + 1}.</a>
-   <a style="font-size:2rem;margin-bottom:.7rem;color:darkgreen;text-shadow:0 0 5px white">${
+   <a style="font-size:1.4rem;margin-bottom:.7rem;color:darkgreen;text-shadow:0 0 5px white;">${
      item.name
    }</a>
    <a>Win-(${item.winMatches})</a>
@@ -90,9 +90,9 @@ for (let i = 0; i < tournamentList.length; i++) {
     scriptOfAssitant += `In the tournament which took place on ${tournamentList[
       speakId
     ][0].date.substr(0, 10)}
-    , Whose type ${tournamentList[0].tournamentType} and the winner is ${
-      tournamentList[speakId][1].name
-    }`;
+    , Whose type ${
+      tournamentList[speakId][0].tournamentType
+    } and the winner is ${tournamentList[speakId][1].name}`;
 
     tournamentList[speakId].map((item, index) => {
       let pos = "";

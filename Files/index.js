@@ -6,19 +6,29 @@
 //
 // now we set the another json file here "setting" in our local storage of our chrome browser
 // this file is fully work on the options selected by the user which is selected in the setting page in our application for the different game type sound like phone setting
-let setting = [
-  {
-    sound: true,
-    tournamentRankingType: {
-      byPoints: true,
-      byWinningMatches: false,
-    },
-  },
-];
 
-// now save the setting file in our browser
-localStorage.setItem("Setting", JSON.stringify(setting));
+// fetch the setting json file from the localStorage of borwser
+let setting = localStorage.getItem("Setting");
+setting = JSON.parse(setting);
+// console.log(setting);
+
+if (!setting) {
+  let setting = [
+    {
+      changes: false,
+      sound: true,
+      tournamentRankingType: {
+        byPoints: true,
+        byWinningMatches: false,
+      },
+      deleteData: false,
+    },
+  ];
+  // now save the setting file in our browser
+  localStorage.setItem("Setting", JSON.stringify(setting));
+}
 console.log(setting);
+
 //
 //
 

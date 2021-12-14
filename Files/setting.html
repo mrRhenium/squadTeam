@@ -25,7 +25,7 @@
           </div>
           <div class="siteNameHeader">
             <a id="C">C</a>
-            <a href="./">hampionShip-75</a>
+            <a href="../index.html">hampionShip-75</a>
           </div>
           <div class="imgHeader">
             <img src="images/indexIcon.jpg" alt="" />
@@ -36,9 +36,111 @@
         <!-- boby part start -->
         <div class="body">
           <div class="settingHeader">
-            <a>Setting Page</a>
+            <a>SETTING PAGE</a>
           </div>
-          <div class="settingContent"></div>
+          <div class="settingContent">
+            <div class="form">
+              <!-- tournament type start -->
+              <div class="formElement">
+                <div class="elementHeading"><a>Tournament Type</a></div>
+                <div class="elementContent">
+                  <div class="element">
+                    <label for="pointTypeInput">By Points</label
+                    ><input
+                      type="radio"
+                      name="type"
+                      id="pointTypeInput"
+                      value="byPoints"
+                    />
+                  </div>
+                  <div class="element">
+                    <label for="matchTypeInput">By Won Matches</label
+                    ><input
+                      type="radio"
+                      name="type"
+                      id="matchTypeInput"
+                      value="byWonMatches"
+                    />
+                  </div>
+                </div>
+              </div>
+              <!-- tournament type end -->
+
+              <!-- delete -->
+              <div class="formElement">
+                <div class="elementHeading"><a>Delete All the Data</a></div>
+                <div class="elementContent">
+                  <div class="element">
+                    <label for="deleteYes">Yes</label
+                    ><input type="radio" name="delete" id="deleteYes" />
+                  </div>
+                  <div class="element">
+                    <label for="deleteNo">NO</label
+                    ><input type="radio" name="delete" id="deleteNo" checked />
+                  </div>
+                </div>
+              </div>
+              <!-- delete -->
+
+              <!-- sound start -->
+              <div class="formElement">
+                <div class="elementHeading"><a>Sound</a></div>
+                <div class="elementContent">
+                  <div class="element">
+                    <label for="soundEnable">Enable</label
+                    ><input
+                      type="radio"
+                      name="sound"
+                      id="soundEnable"
+                      checked
+                      onclick="alert('Sorry \n This feature is currently Unavailable')"
+                    />
+                  </div>
+                  <div class="element">
+                    <label for="soundDisable">Disable</label
+                    ><input
+                      type="radio"
+                      name="sound"
+                      id="soundDisable"
+                      onclick="alert('Sorry \n This feature is currently Unavailable')"
+                    />
+                  </div>
+                </div>
+              </div>
+              <!-- sound end -->
+
+              <!-- dark theme -->
+              <div class="formElement">
+                <div class="elementHeading"><a>Dark Theme</a></div>
+                <div class="elementContent">
+                  <div class="element">
+                    <label for="themeEnable">Enable</label
+                    ><input
+                      type="radio"
+                      name="theme"
+                      id="themeEnable"
+                      checked
+                      onclick="alert('Sorry \n This feature is currently Unavailable')"
+                    />
+                  </div>
+                  <div class="element">
+                    <label for="themeDisable">Disable</label
+                    ><input
+                      type="radio"
+                      name="theme"
+                      id="themeDisable"
+                      onclick="alert('Sorry \n This feature is currently Unavailable')"
+                    />
+                  </div>
+                </div>
+              </div>
+              <!-- dark theme -->
+            </div>
+            <div class="formBtnCover">
+              <a id="saveBtn">Save</a>
+              <a id="discardBtn">Discard</a>
+            </div>
+          </div>
         </div>
         <!-- boby part over -->
 
@@ -68,6 +170,14 @@
                     ><i class="fa fa-book" aria-hidden="true"></i>
                   </sapn>
                   <sapn class="iconText">History</sapn>
+                </a>
+              </li>
+              <li class="list feedback">
+                <a id="feedbackBtnFooter">
+                  <sapn class="icon"
+                    ><i class="fa fa-street-view" aria-hidden="true"></i>
+                  </sapn>
+                  <sapn class="iconText">Feedback</sapn>
                 </a>
               </li>
               <li class="list active setting">
