@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="webContainer.css" />
     <link rel="stylesheet" href="header.css" />
     <link rel="stylesheet" href="setting.css" />
+    <link rel="stylesheet" href="feedback.css" />
     <link rel="stylesheet" href="footer.css" />
     <link
       rel="stylesheet"
@@ -141,6 +142,32 @@
               <a id="discardBtn">Discard</a>
             </div>
           </div>
+          <!-- feedback section for improvement -->
+          <div class="feedbackSection">
+            <div class="feedbackHeader"><a>Feedback</a></div>
+            <div class="feedbackContent">
+              <form>
+                <div class="feedNameCover">
+                  <input
+                    type="text"
+                    id="feedName"
+                    placeholder="Enter your Name"
+                  />
+                </div>
+                <div class="feedMsgCover">
+                  <textarea id="feedMsg" cols="30" rows="10"></textarea>
+                </div>
+                <div class="feedBtnCover">
+                  <div class="feedStarCover"></div>
+                  <div class="feedPost_like">
+                    <div class="likeBtnCover"></div>
+                    <div class="feedPost"><a>Post</a></div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <!-- feedback section is ended -->
         </div>
         <!-- boby part over -->
 
@@ -195,6 +222,7 @@
       </div>
     </div>
     <script src="setting.js"></script>
+    <script src="feedback.js"></script>
     <script src="footer.js"></script>
   </body>
 </html>

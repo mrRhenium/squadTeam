@@ -41,7 +41,7 @@ const homeBtnFooter = document.querySelector("#homeBtnFooter");
 const listBtnFooter = document.querySelector("#listBtnFooter");
 const profileBtnFooter = document.querySelector("#profileBtnFooter");
 const historyBtnFooter = document.querySelector("#historyBtnFooter");
-const settingBtnFooter = document.querySelector("#settingBtnFooter");
+// const settingBtnFooter = document.querySelector("#settingBtnFooter");
 
 homeBtnFooter.addEventListener("click", (e) => {
   e.preventDefault();

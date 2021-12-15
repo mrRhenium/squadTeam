@@ -1,0 +1,164 @@
+.feedbackSection {
+  position: relative;
+  display: none;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 0%;
+  border: 2px solid #09aeff;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+  transition: 1s;
+}
+.feedbackSectionActive {
+  display: flex;
+  height: 60%;
+}
+.feedbackHeader {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 15%;
+  border: 1px solid white;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+  background-color: black;
+}
+.feedbackHeader a {
+  color: white;
+  font-size: 2rem;
+}
+.feedbackContent {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 85%;
+  background-image: url(images/squadBack.jpeg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: repeat;
+}
+form {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 90%;
+  border: 1px solid white;
+  border-radius: 30px;
+  background-color: rgba(225, 225, 225, 0.5);
+  backdrop-filter: blur(5px);
+}
+.feedNameCover {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 20%;
+  border: 0px solid red;
+}
+.feedNameCover input {
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 0 1rem;
+  width: 90%;
+  height: 80%;
+  outline: none;
+  border: 1px solid black;
+  border-radius: 20px;
+  background-color: transparent;
+}
+.feedNameCover input::placeholder {
+  color: white;
+}
+
+.feedMsgCover {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 45%;
+  border: 0px solid red;
+  overflow: hidden;
+}
+textarea {
+  resize: none;
+  outline: none;
+  font-size: 1.5rem;
+  padding: 0.5rem 1.5rem;
+  width: 90%;
+  height: 90%;
+  border: 1px solid black;
+  border-radius: 30px;
+  background-color: transparent;
+}
+.feedBtnCover {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 35%;
+  border: 0px solid red;
+}
+.feedStarCover {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50%;
+  border: 0px solid white;
+}
+.feedPost_like {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50%;
+  border: 0px solid white;
+}
+.likeBtnCover {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  border: 0px solid red;
+}
+
+.feedPost {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  border: 0px solid red;
+}
+.feedPost a {
+  font-size: 1.5rem;
+  padding: 0rem 1rem;
+  color: white;
+  border: 1px solid white;
+  border-radius: 50px;
+  cursor: pointer;
+}
+.feedPost a:hover {
+  font-size: 1.4rem;
+}
