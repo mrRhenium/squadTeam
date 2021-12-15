@@ -29,7 +29,7 @@
             <a href="../index.html">hampionShip-75</a>
           </div>
           <div class="imgHeader">
-            <img src="images/indexIcon.jpg" alt="" />
+            <img src="images/setting.jpg" alt="" />
           </div>
         </header>
         <!-- Header part over -->
@@ -144,7 +144,9 @@
           </div>
           <!-- feedback section for improvement -->
           <div class="feedbackSection">
-            <div class="feedbackHeader"><a>Feedback</a></div>
+            <div class="feedbackHeader">
+              <a>Feedback</a>
+            </div>
             <div class="feedbackContent">
               <form>
                 <div class="feedNameCover">
@@ -152,16 +154,39 @@
                     type="text"
                     id="feedName"
                     placeholder="Enter your Name"
+                    required
+                    autocomplete="off"
                   />
                 </div>
                 <div class="feedMsgCover">
-                  <textarea id="feedMsg" cols="30" rows="10"></textarea>
+                  <textarea
+                    id="feedMsg"
+                    cols="30"
+                    rows="10"
+                    placeholder="Please!! Enter Your First Experience"
+                    required
+                  ></textarea>
                 </div>
                 <div class="feedBtnCover">
-                  <div class="feedStarCover"></div>
-                  <div class="feedPost_like">
-                    <div class="likeBtnCover"></div>
-                    <div class="feedPost"><a>Post</a></div>
+                  <div class="feedStarAndLike">
+                    <div class="feedStarCover"></div>
+                    <div class="likeBtnCover">
+                      <input type="radio" name="like" id="likeIcon" />
+                      <label
+                        for="likeIcon"
+                        class="fa fa-thumbs-up"
+                        id="likeBtn"
+                      ></label>
+                      <input type="radio" name="like" id="dislikeIcon" />
+                      <label
+                        for="dislikeIcon"
+                        class="fa fa-thumbs-down"
+                        id="dislikeBtn"
+                      ></label>
+                    </div>
+                  </div>
+                  <div class="feedPost">
+                    <button type="submit" id="postBtn"><a>Post</a></button>
                   </div>
                 </div>
               </form>

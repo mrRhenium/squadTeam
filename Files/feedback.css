@@ -19,6 +19,8 @@
 .feedbackHeader {
   position: relative;
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -53,9 +55,10 @@ form {
   align-items: center;
   width: 90%;
   height: 90%;
+  min-height: 250px;
   border: 1px solid white;
   border-radius: 30px;
-  background-color: rgba(225, 225, 225, 0.5);
+  background-color: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(5px);
 }
 .feedNameCover {
@@ -68,18 +71,22 @@ form {
   border: 0px solid red;
 }
 .feedNameCover input {
+  color: white;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   padding: 0 1rem;
+  margin-top: 0.5rem;
   width: 90%;
   height: 80%;
   outline: none;
-  border: 1px solid black;
+  border: 1px solid white;
   border-radius: 20px;
-  background-color: transparent;
+  background-color: rgba(225, 225, 225, 0.5);
 }
-.feedNameCover input::placeholder {
-  color: white;
+.feedNameCover input::placeholder,
+textarea::placeholder {
+  color: black;
+  text-align: center;
 }
 
 .feedMsgCover {
@@ -93,15 +100,16 @@ form {
   overflow: hidden;
 }
 textarea {
+  color: white;
   resize: none;
   outline: none;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   padding: 0.5rem 1.5rem;
   width: 90%;
   height: 90%;
-  border: 1px solid black;
+  border: 1px solid white;
   border-radius: 30px;
-  background-color: transparent;
+  background-color: rgba(225, 225, 225, 0.5);
 }
 .feedBtnCover {
   position: relative;
@@ -114,7 +122,7 @@ textarea {
   height: 35%;
   border: 0px solid red;
 }
-.feedStarCover {
+.feedStarAndLike {
   position: relative;
   display: flex;
   justify-content: center;
@@ -123,23 +131,47 @@ textarea {
   height: 50%;
   border: 0px solid white;
 }
-.feedPost_like {
+.feedStarCover {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 50%;
+  width: 70%;
+  height: 100%;
   border: 0px solid white;
+  transform: rotateY(180deg);
+}
+.feedStarCover input:not(:checked) ~ label:hover,
+.feedStarCover input:not(:checked) ~ label:hover ~ label,
+.feedStarCover input:checked ~ label {
+  color: yellow;
+  font-size: 1.6rem;
 }
 .likeBtnCover {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 50%;
+  width: 30%;
   height: 100%;
   border: 0px solid red;
+}
+.likeBtnCover label:hover,
+.likeBtnCover input:checked + label {
+  color: #09aeff;
+  text-shadow: 0 0 1px black;
+}
+.feedStarCover label,
+.likeBtnCover label {
+  font-size: 1.4rem;
+  color: white;
+  cursor: pointer;
+  margin: 0 0.5rem;
+  text-shadow: 0 0 1px black;
+}
+.likeBtnCover input,
+.feedStarCover input {
+  display: none;
 }
 
 .feedPost {
@@ -147,18 +179,24 @@ textarea {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 50%;
-  height: 100%;
+  width: 100%;
+  height: 50%;
   border: 0px solid red;
 }
+.feedPost button {
+  outline: none;
+  border: 0px solid;
+  background-color: transparent;
+}
 .feedPost a {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   padding: 0rem 1rem;
   color: white;
   border: 1px solid white;
   border-radius: 50px;
   cursor: pointer;
+  background-color: rgba(28, 252, 8, 0.637);
 }
 .feedPost a:hover {
-  font-size: 1.4rem;
+  font-size: 1.1rem;
 }
