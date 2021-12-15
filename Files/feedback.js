@@ -59,7 +59,9 @@ star.forEach((item, index) => {
     console.log(feedback[0].star);
   };
   // set the value according to the localStorage
-  star[star.length - feedback[0].star].setAttribute("checked", "");
+  if (feedback[0].star != null) {
+    star[star.length - feedback[0].star].setAttribute("checked", "");
+  }
 });
 // end here
 

@@ -45,48 +45,62 @@ const historyBtnFooter = document.querySelector("#historyBtnFooter");
 
 homeBtnFooter.addEventListener("click", (e) => {
   e.preventDefault();
-  if (/index.html/.test(window.location.href)) {
-    return console.log("index.html");
-  } else {
-    window.location.href = "../index.html";
-    console.log(window.location.href);
-  }
+  setTimeout(() => {
+    if (/index.html/.test(window.location.href)) {
+      return console.log("index.html");
+    } else {
+      window.location.href = "../index.html";
+      console.log(window.location.href);
+    }
+  }, 1500);
 });
 
 listBtnFooter.addEventListener("click", () => {
-  if (/squad.html/.test(window.location.href)) {
-    return console.log("squad.html");
-  } else if (/tournamentHistory.html/.test(window.location.href)) {
-    window.location.href = "squad.html";
-  } else if (/currentMatch.html/.test(window.location.href)) {
-    return console.log("squad.html");
-  } else {
-    if (DataForIndex) {
-      window.location.href = "Files/squad.html";
+  setTimeout(() => {
+    if (/squad.html/.test(window.location.href)) {
+      return console.log("squad.html");
+    } else if (/tournamentHistory.html/.test(window.location.href)) {
+      if (DataForIndex) {
+        window.location.href = "Files/squad.html";
+      } else {
+        alert(
+          "Please !! \n Firstly Fill required info. in Input boxes \n Then click Next Button"
+        );
+      }
+    } else if (/currentMatch.html/.test(window.location.href)) {
+      return console.log("squad.html");
     } else {
-      alert(
-        "Please !! \n Firstly Fill required info. in Input boxes \n Then click Next Button"
-      );
+      if (DataForIndex) {
+        window.location.href = "Files/squad.html";
+      } else {
+        alert(
+          "Please !! \n Firstly Fill required info. in Input boxes \n Then click Next Button"
+        );
+      }
     }
-  }
+  }, 1500);
 });
 
 historyBtnFooter.addEventListener("click", () => {
-  if (/tournamentHistory.html/.test(window.location.href)) {
-    return console.log("tournamentHistory.html");
-  } else if (/squad.html/.test(window.location.href)) {
-    window.location.href = "tournamentHistory.html";
-  } else {
-    window.location.href = "Files/tournamentHistory.html";
-  }
+  setTimeout(() => {
+    if (/tournamentHistory.html/.test(window.location.href)) {
+      return console.log("tournamentHistory.html");
+    } else if (/squad.html/.test(window.location.href)) {
+      window.location.href = "tournamentHistory.html";
+    } else {
+      window.location.href = "Files/tournamentHistory.html";
+    }
+  }, 1500);
 });
 
 settingBtnFooter.addEventListener("click", () => {
-  if (/setting.html/.test(window.location.href)) {
-    return console.log("tournamentHistory.html");
-  } else if (/tournamentHistory.html/.test(window.location.href)) {
-    window.location.href = "setting.html";
-  } else {
-    window.location.href = "Files/setting.html";
-  }
+  setTimeout(() => {
+    if (/setting.html/.test(window.location.href)) {
+      return console.log("tournamentHistory.html");
+    } else if (/tournamentHistory.html/.test(window.location.href)) {
+      window.location.href = "setting.html";
+    } else {
+      window.location.href = "Files/setting.html";
+    }
+  }, 1500);
 });

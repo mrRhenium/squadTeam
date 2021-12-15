@@ -79,6 +79,9 @@ saveBtn.addEventListener("click", () => {
       // delete all the current Matches
       localStorage.removeItem("tournament");
 
+      // delete all the current Matches
+      localStorage.removeItem("Feedback");
+
       // alert the user that file is changed
       alert("Changes are Successfully Implemented");
 
