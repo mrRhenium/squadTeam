@@ -1,0 +1,203 @@
+@media screen and (max-width: 1250px) {
+  .mobileCover {
+    width: 38%;
+  }
+}
+@media screen and (max-width: 1150px) {
+  .mobileCover {
+    width: 40%;
+  }
+}
+/* Assumption ended */
+
+@media screen and (max-width: 1113px) {
+  .mobileCover {
+    width: 45%;
+  }
+}
+@media screen and (max-width: 1100px) {
+  html {
+    font-size: 98%;
+  }
+  .mobileCover {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 1050px) {
+  html {
+    font-size: 98%;
+  }
+  .mobileCover {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  html {
+    font-size: 98%;
+  }
+  .mobileCover {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 950px) {
+  html {
+    font-size: 98%;
+  }
+  .mobileCover {
+    width: 58%;
+  }
+}
+@media screen and (max-width: 900px) {
+  html {
+    font-size: 98%;
+  }
+  .mobileCover {
+    width: 55%;
+  }
+}
+@media screen and (max-width: 850px) {
+  html {
+    font-size: 98%;
+  }
+  .mobileCover {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 800px) {
+  html {
+    font-size: 98%;
+  }
+  .mobileCover {
+    width: 65%;
+  }
+}
+@media screen and (max-width: 750px) {
+  html {
+    font-size: 98%;
+  }
+  .mobileCover {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 700px) {
+  html {
+    font-size: 98%;
+  }
+  .mobileCover {
+    width: 75%;
+  }
+}
+@media screen and (max-width: 650px) {
+  html {
+    font-size: 98%;
+  }
+  .mobileCover {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 98%;
+  }
+  .mobileCover {
+    width: 85%;
+  }
+}
+@media screen and (max-width: 550px) {
+  html {
+    font-size: 98%;
+  }
+  .mobileCover {
+    width: 95%;
+  }
+  .headingOptions {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 500px) {
+  html {
+    font-size: 98%;
+  }
+  .mobileCover {
+    width: 100%;
+  }
+  .matchTeamName a,
+  .matchCategory a {
+    font-size: 1.3rem;
+  }
+  .currentMatchName a {
+    font-size: 1.8rem;
+  }
+}
+@media screen and (max-width: 450px) {
+  html {
+    font-size: 98%;
+  }
+  .tntProfItems {
+    width: 80%;
+  }
+  textarea {
+    font-size: 1rem;
+  }
+  .logoHeader img {
+    height: 55%;
+  }
+  .imgHeader img {
+    height: 65%;
+  }
+}
+@media screen and (max-width: 400px) {
+  html {
+    font-size: 80%;
+  }
+  .tournamentProfileList {
+    width: 90%;
+  }
+  .elementHeading a {
+    font-size: 1.3rem;
+  }
+
+  .logoHeader img {
+    width: 55%;
+  }
+  .imgHeader img {
+    height: 60%;
+  }
+  .element input {
+    transform: scale(1);
+  }
+}
+@media screen and (max-width: 330px) {
+  html {
+    font-size: 75%;
+  }
+  .tournamentProfileHeading a {
+    font-size: 1.6rem;
+  }
+  .elementHeading a {
+    font-size: 1.2rem;
+  }
+  .element label {
+    font-size: 1rem;
+  }
+  .logoHeader img {
+    width: 60%;
+    height: 50%;
+  }
+  .imgHeader img {
+    width: 70%;
+    height: 60%;
+  }
+}
+@media screen and (max-width: 280px) {
+  html {
+    font-size: 70%;
+  }
+
+  .logoHeader img {
+    height: 45%;
+  }
+  .imgHeader img {
+    height: 55%;
+  }
+}
