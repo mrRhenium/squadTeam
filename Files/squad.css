@@ -214,7 +214,8 @@
   /* padding: 0 -0.5rem; */
   /* border: 1px solid black; */
 }
-.matchStartBtn #matchResult {
+.matchStartBtn,
+#matchResult {
   color: white;
   padding: 1rem 1.5rem;
   font-size: 1.2rem;

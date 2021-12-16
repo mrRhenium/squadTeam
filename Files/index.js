@@ -251,7 +251,7 @@ nextBtn.addEventListener("click", (e) => {
 
     // after doing all functionality we redirect to next page which is called "Squad.html" page for next procesure of our tournaments
     setTimeout(() => {
-      window.location.href = "/Files/squad.html";
+      window.location.href = "Files/squad.html";
     }, 1000);
     // nextBtn.setAttribute("href", "Files/squad.html");
     //
