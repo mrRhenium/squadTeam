@@ -71,7 +71,7 @@ listBtnFooter.addEventListener("click", () => {
       return console.log("squad.html");
     } else {
       if (DataForIndex) {
-        window.location.href = "/Files/squad.html";
+        window.location.href = "Files/squad.html";
       } else {
         alert(
           "Please !! \n Firstly Fill required info. in Input boxes \n Then click Next Button"
