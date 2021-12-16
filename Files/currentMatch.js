@@ -232,7 +232,7 @@ submitBtnId.addEventListener("click", () => {
     // updating the Data to local Storage
     localStorage.setItem("tournament", JSON.stringify(Data));
     setTimeout(() => {
-      window.location.href = "/Files/squad.html";
+      window.location.href = "Files/squad.html";
     }, 1000);
     // submitBtnId.setAttribute("href", "squad.html");
   }
