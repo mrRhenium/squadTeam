@@ -215,12 +215,12 @@ submitBtnId.addEventListener("click", () => {
       findRankAccordingToWinMatches();
     }
 
-    if (
-      Data.remainingMatches > -1 ||
-      setting[0].tournamentRankingType.byWinningMatches
-    ) {
-      findRankAccordingToPoints();
-    }
+    findRankAccordingToPoints();
+    // if (
+    //   Data.remainingMatches > -1 ||
+    //   setting[0].tournamentRankingType.byWinningMatches
+    // ) {
+    // }
     //
     //
 

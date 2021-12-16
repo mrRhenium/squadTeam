@@ -61,58 +61,6 @@ for (var i = 0; i < matchSquad.length; i++) {
     ].innerHTML = `<i class="fa fa-trophy" aria-hidden="true" style="color:yellow"></i> <a id="matchResult">${matchSquad[i].winnerName} is won by ${matchSquad[i].margin} Points</a>`;
     // console.log("add");
 
-    // we targeting the rematch btn in content part of the match Boxes div
-    const rematch = document.querySelectorAll("#rematch");
-    // we define the rematch function through it we can organise the match again
-    rematch[i].onclick = () => {
-      // set the over false
-      Data.matchSquad[i - 1].over = false;
-      // set the remaingMatches to previous value
-      Data.remainingMatches++;
-
-      // update the profile to previous rank
-      Data.playersPositionAccordingToPoints.map((item) => {
-        if (item.name == Data.matchSquad[i - 1].winnerName) {
-          item.points -= Data.matchSquad[i - 1].margin;
-        }
-        if (item.name == Data.matchSquad[i - 1].looserName) {
-          item.points += Data.matchSquad[i - 1].margin;
-        }
-      });
-
-      // update the profile to previous rank according to winning mathces and lossing matches
-      if (Data.remainingMatches > -1) {
-        Data.playersPositionAccordingToWinMatches.map((item) => {
-          if (item.name == Data.matchSquad[i - 1].winnerName) {
-            item.winMatches--;
-          }
-          if (item.name == Data.matchSquad[i - 1].looserName) {
-            item.loseMatches--;
-          }
-        });
-      }
-
-      // update the totals points and winning and lossing matches in membersProfile unchanged
-      Data.membersProfile.map((item) => {
-        if (item.name == Data.matchSquad[i - 1].winnerName) {
-          item.totalPoints -= Data.matchSquad[i - 1].margin;
-          item.winMatches--;
-        }
-        if (item.name == Data.matchSquad[i - 1].looserName) {
-          item.totalPoints += Data.matchSquad[i - 1].margin;
-          item.loseMatches--;
-        }
-      });
-
-      // set changes in local storage
-      localStorage.setItem("tournament", JSON.stringify(Data));
-      setTimeout(() => {
-        window.location.href = `currentMatch.html`;
-      }, 1000);
-      // console.log(i + "click");
-    };
-    // rematch functionality ends here
-
     //
   } else if (!matchSquad[i].over) {
     // we set the start btn functionality that is after clicking the startBtn we redirecting to the currentMatch html page only on that btn which just after over match then we break the loop to avoid other sibling start Btn
@@ -127,7 +75,65 @@ for (var i = 0; i < matchSquad.length; i++) {
   }
 }
 // function ends here
+//
+//
 
+// we targeting the rematch btn in content part of the match Boxes div
+const rematch = document.querySelectorAll("#rematch");
+// we define the rematch function through it we can organise the match again
+rematch.forEach((item, index) => {
+  item.onclick = () => {
+    console.log(index);
+    // set the over false
+    Data.matchSquad[index].over = false;
+    // set the remaingMatches to previous value
+    Data.remainingMatches++;
+
+    // update the profile to previous rank
+    Data.playersPositionAccordingToPoints.map((item) => {
+      if (item.name == Data.matchSquad[index].winnerName) {
+        item.points -= Data.matchSquad[index].margin;
+      }
+      if (item.name == Data.matchSquad[index].looserName) {
+        item.points += Data.matchSquad[index].margin;
+      }
+    });
+
+    // update the profile to previous rank according to winning mathces and lossing matches
+    if (Data.remainingMatches > -1) {
+      Data.playersPositionAccordingToWinMatches.map((item) => {
+        if (item.name == Data.matchSquad[index].winnerName) {
+          item.winMatches--;
+        }
+        if (item.name == Data.matchSquad[index].looserName) {
+          item.loseMatches--;
+        }
+      });
+    }
+
+    // update the totals points and winning and lossing matches in membersProfile unchanged
+    Data.membersProfile.map((item) => {
+      if (item.name == Data.matchSquad[index].winnerName) {
+        item.totalPoints -= Data.matchSquad[index].margin;
+        item.winMatches--;
+      }
+      if (item.name == Data.matchSquad[index].looserName) {
+        item.totalPoints += Data.matchSquad[index].margin;
+        item.loseMatches--;
+      }
+    });
+
+    // set changes in local storage
+    localStorage.setItem("tournament", JSON.stringify(Data));
+    setTimeout(() => {
+      window.location.href = `currentMatch.html`;
+    }, 1000);
+    // console.log(i + "click");
+  };
+});
+// rematch functionality ends here
+
+//
 // disable rematch functionality after selection of semi and finalist
 const rematchBtn = document.querySelectorAll(".rematchBtn");
 if (Data.remainingMatches < 0) {

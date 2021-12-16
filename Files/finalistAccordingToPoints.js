@@ -21,8 +21,30 @@ if (setting[0].tournamentRankingType.byPoints) {
   //
 
   // we define the playerRank array which is merge in tournament History json file after the whole match is over
+  // tournamentType field is added to show the tournament type in tournament profile page more convience
   const playerRank = [
     { date: new Date().toISOString(), tournamentType: "By Points" },
+    {
+      name: "Coming Soon",
+      rank: 0,
+      points: "*",
+      winMatches: "*",
+      loseMatches: "*",
+    },
+    {
+      name: "Coming Soon",
+      rank: 1,
+      points: "*",
+      winMatches: "*",
+      loseMatches: "*",
+    },
+    {
+      name: "Coming Soon",
+      rank: 2,
+      points: "*",
+      winMatches: "*",
+      loseMatches: "*",
+    },
   ];
   console.log(playerRank[0]);
 
@@ -44,6 +66,29 @@ if (setting[0].tournamentRankingType.byPoints) {
       Data.remainingMatches == 0 &&
       finalPageBtn.innerHTML == "SemiFinalist"
     ) {
+      //
+      // set upper than 2 index
+      // due to re-assemble the points table after semi and finals
+      Data.playersPositionAccordingToPoints.map((item, index) => {
+        if (index > 2) {
+          playerRank.push({
+            name: item.name,
+            rank: index,
+            points: item.points,
+            winMatches: item.win,
+            loseMatches: item.lose,
+          });
+        }
+      });
+      console.log(playerRank);
+
+      tournamentHistory.push(playerRank);
+      //set the player rank in localStorage
+      localStorage.setItem(
+        "tournamentHistory",
+        JSON.stringify(tournamentHistory)
+      );
+      //
       // function start here
 
       // ensure the semifinalist will be selected
@@ -119,48 +164,37 @@ if (setting[0].tournamentRankingType.byPoints) {
       });
 
       // set 1st position
-      playerRank.push({
+      playerRank[1] = {
         name: Data.matchSquad[lastMatchIndex - 1].winnerName,
         rank: 0,
         points: Data.membersProfile[rank1Id].totalPoints,
         winMatches: Data.membersProfile[rank1Id].winMatches,
         loseMatches: Data.membersProfile[rank1Id].loseMatches,
-      });
+      };
 
       // set 2nd position
-      playerRank.push({
+      playerRank[2] = {
         name: Data.matchSquad[lastMatchIndex - 1].looserName,
         rank: 1,
         points: Data.membersProfile[rank2Id].totalPoints,
         winMatches: Data.membersProfile[rank2Id].winMatches,
         loseMatches: Data.membersProfile[rank2Id].loseMatches,
-      });
+      };
 
       // set 3rd position
-      playerRank.push({
+      playerRank[3] = {
         name: Data.matchSquad[lastMatchIndex - 2].looserName,
         rank: 2,
         points: Data.membersProfile[rank3Id].totalPoints,
         winMatches: Data.membersProfile[rank3Id].winMatches,
         loseMatches: Data.membersProfile[rank3Id].loseMatches,
-      });
-
-      // set upper than 2 index
-      // due to re-assemble the points table after semi and finals
-      Data.playersPositionAccordingToPoints.map((item, index) => {
-        if (index > 2) {
-          playerRank.push({
-            name: item.name,
-            rank: index,
-            points: item.points,
-            winMatches: item.win,
-            loseMatches: item.lose,
-          });
-        }
-      });
+      };
 
       // put the new touranment detain in tournaments history json file in local storage
-      tournamentHistory.push(playerRank);
+      tournamentHistory[tournamentHistory.length - 1][1] = playerRank[1];
+      tournamentHistory[tournamentHistory.length - 1][2] = playerRank[2];
+      tournamentHistory[tournamentHistory.length - 1][3] = playerRank[3];
+      //
       console.log(playerRank);
       console.log(tournamentHistory);
 
