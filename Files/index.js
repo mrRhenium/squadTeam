@@ -250,7 +250,10 @@ nextBtn.addEventListener("click", (e) => {
     localStorage.setItem("tournament", JSON.stringify(data));
 
     // after doing all functionality we redirect to next page which is called "Squad.html" page for next procesure of our tournaments
-    nextBtn.setAttribute("href", "Files/squad.html");
+    setTimeout(() => {
+      window.location.href = "/Files/squad.html";
+    }, 1000);
+    // nextBtn.setAttribute("href", "Files/squad.html");
     //
     //
   } else {

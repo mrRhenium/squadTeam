@@ -106,8 +106,9 @@ for (var i = 0; i < matchSquad.length; i++) {
 
       // set changes in local storage
       localStorage.setItem("tournament", JSON.stringify(Data));
-
-      window.location.href = `currentMatch.html`;
+      setTimeout(() => {
+        window.location.href = `currentMatch.html`;
+      }, 1000);
       // console.log(i + "click");
     };
     // rematch functionality ends here
@@ -116,7 +117,9 @@ for (var i = 0; i < matchSquad.length; i++) {
   } else if (!matchSquad[i].over) {
     // we set the start btn functionality that is after clicking the startBtn we redirecting to the currentMatch html page only on that btn which just after over match then we break the loop to avoid other sibling start Btn
     startBtn[i].onclick = () => {
-      window.location.href = `currentMatch.html`;
+      setTimeout(() => {
+        window.location.href = `currentMatch.html`;
+      }, 1000);
       console.log(i + "start btn is clicked");
       // startBtn[i].setAttribute("href", "currentMatch.html");
     };

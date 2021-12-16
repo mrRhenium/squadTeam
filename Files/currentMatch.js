@@ -231,7 +231,10 @@ submitBtnId.addEventListener("click", () => {
 
     // updating the Data to local Storage
     localStorage.setItem("tournament", JSON.stringify(Data));
-    submitBtnId.setAttribute("href", "squad.html");
+    setTimeout(() => {
+      window.location.href = "/Files/squad.html";
+    }, 1000);
+    // submitBtnId.setAttribute("href", "squad.html");
   }
 });
 

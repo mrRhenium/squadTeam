@@ -178,13 +178,19 @@ if (setting[0].tournamentRankingType.byPoints) {
       localStorage.setItem("tournament", JSON.stringify(Data));
 
       // Go to Tournament profile file
-      finalPageBtn.setAttribute("href", "tournamentHistory.html");
+      setTimeout(() => {
+        window.location.href = "/Files/tournamentHistory.html";
+      }, 1000);
+      // finalPageBtn.setAttribute("href", "tournamentHistory.html");
     } else if (finalPageBtn.innerHTML == "Over") {
       // show some alert message after over the whole tournament
       alert("Tournament is over");
 
       // Go to Tournament profile file
-      finalPageBtn.setAttribute("href", "tournamentHistory.html");
+      setTimeout(() => {
+        window.location.href = "/Files/tournamentHistory.html";
+      }, 1000);
+      // finalPageBtn.setAttribute("href", "tournamentHistory.html");
     } else {
       alert("Please!! Finish all the remaining matches");
     }
