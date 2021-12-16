@@ -135,7 +135,7 @@
 }
 .elementHeading a {
   color: black;
-  font-size: 1.4rem;
+  font-size: 1.4rem !important;
   margin-top: 0.1rem;
   padding: 0.05rem 1rem;
   border-radius: 50px;
@@ -173,7 +173,7 @@
   align-items: center;
   width: 70%;
   height: 100%;
-  font-size: 1.2rem;
+  font-size: 1.2rem !important;
   border: 0px solid white;
   font-family: "Play", sans-serif;
   cursor: pointer;

@@ -213,7 +213,7 @@ if (setting[0].tournamentRankingType.byPoints) {
 
       // Go to Tournament profile file
       setTimeout(() => {
-        window.location.href = "/Files/tournamentHistory.html";
+        window.location.href = "Files/tournamentHistory.html";
       }, 1000);
       // finalPageBtn.setAttribute("href", "tournamentHistory.html");
     } else if (finalPageBtn.innerHTML == "Over") {
@@ -222,7 +222,7 @@ if (setting[0].tournamentRankingType.byPoints) {
 
       // Go to Tournament profile file
       setTimeout(() => {
-        window.location.href = "/Files/tournamentHistory.html";
+        window.location.href = "Files/tournamentHistory.html";
       }, 1000);
       // finalPageBtn.setAttribute("href", "tournamentHistory.html");
     } else {

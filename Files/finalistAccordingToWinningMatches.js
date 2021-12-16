@@ -178,14 +178,14 @@ if (setting[0].tournamentRankingType.byWinningMatches) {
 
       // Go to Tournament profile file
       setTimeout(() => {
-        window.location.href = "/Files/tournamentHistory.html";
+        window.location.href = "Files/tournamentHistory.html";
       }, 1000);
       // finalPageBtn.setAttribute("href", "tournamentHistory.html");
     } else if (finalPageBtn.innerHTML == "Over") {
       // show some alert message after over the whole tournament
       alert("Tournament is over");
       setTimeout(() => {
-        window.location.href = "/Files/tournamentHistory.html";
+        window.location.href = "Files/tournamentHistory.html";
       }, 1000);
       // Go to Tournament profile file
       // finalPageBtn.setAttribute("href", "tournamentHistory.html");

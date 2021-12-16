@@ -116,7 +116,7 @@
 .currentMatchName a {
   color: orange;
   margin-top: 0.5rem;
-  font-size: 2rem;
+  font-size: 2rem !important;
   padding: 0rem 1rem;
   font-family: "Baloo Bhaijaan 2", cursive;
   text-overflow: ellipsis;
