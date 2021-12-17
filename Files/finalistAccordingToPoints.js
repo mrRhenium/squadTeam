@@ -67,6 +67,9 @@ if (setting[0].tournamentRankingType.byPoints) {
       finalPageBtn.innerHTML == "SemiFinalist"
     ) {
       //
+      Data.matchSquad.map((item) => {
+        item.rematch = false;
+      });
       // set upper than 2 index
       // due to re-assemble the points table after semi and finals
       Data.playersPositionAccordingToPoints.map((item, index) => {
@@ -137,6 +140,11 @@ if (setting[0].tournamentRankingType.byPoints) {
       Data.matchSquad[Data.matchSquad.length - 1].TeamName2 = `${
         Data.matchSquad[Data.matchSquad.length - 2].winnerName
       }`;
+
+      //
+
+      //
+      Data.matchSquad[Data.matchSquad.length - 2].rematch = false;
 
       // set some match again in localStorage
       localStorage.setItem("tournament", JSON.stringify(Data));
@@ -209,7 +217,10 @@ if (setting[0].tournamentRankingType.byPoints) {
       //
       console.log(playerRank);
       console.log(tournamentHistory);
-
+      //
+      //
+      Data.matchSquad[Data.matchSquad.length - 1].rematch = false;
+      //
       //set the player rank in localStorage
       localStorage.setItem(
         "tournamentHistory",

@@ -32,7 +32,7 @@ const matchBoxesHeading = document.querySelectorAll(".matchBoxesHeading");
 Data.matchSquad.filter((item, index) => {
   if (item.matchCategory != "normal") {
     matchBoxesHeading[index].innerHTML = `<div class="matchCategory">
-    <a style="font-size: 1rem;margin-top:0.2rem;color:royalblue">${item.matchCategory}</a>
+    <a style="font-size: 1.2rem;margin-top:0.3rem;color:royalblue">${item.matchCategory}</a>
   </div>
   <div class="matchTeamName">
     <a>${item.TeamName1} vs ${item.TeamName2}</a>
@@ -139,11 +139,16 @@ rematch.forEach((item, index) => {
 const rematchBtn = document.querySelectorAll(".rematchBtn");
 if (Data.remainingMatches < 0) {
   for (let i = 0; i < Data.matchSquad.length; i++) {
-    if (i != Data.matchSquad.length - 1 || Data.tournamentOver) {
-      if (Data.matchSquad[i].over) {
-        rematchBtn[i].classList.add("rematchDisable");
-        // console.log(i + " this one " + Data.matchSquad[i].over);
-      }
+    if (!Data.matchSquad[i].rematch) {
+      rematchBtn[i].classList.add("rematchDisable");
     }
   }
+  // for (let i = 0; i < Data.matchSquad.length; i++) {
+  //   if (i != Data.matchSquad.length - 1 || Data.tournamentOver) {
+  //     if (Data.matchSquad[i].over) {
+  //       rematchBtn[i].classList.add("rematchDisable");
+  //       // console.log(i + " this one " + Data.matchSquad[i].over);
+  //     }
+  //   }
+  // }
 }

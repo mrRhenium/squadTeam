@@ -121,7 +121,7 @@
 .matchCategory a {
   display: block;
   color: black;
-  font-size: 1.5rem !important; /*1.2*/
+  font-size: 1.5rem; /*1.2*/
   margin-top: 0.5rem; /**/
   padding: 1rem 1rem;
   font-family: "Baloo Bhaijaan 2", cursive;
@@ -130,6 +130,8 @@
   white-space: nowrap;
 }
 .matchCategory a {
+  text-transform: capitalize;
+  margin-top: 0.7rem;
   text-shadow: 0 0 2px black;
 }
 

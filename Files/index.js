@@ -219,6 +219,7 @@ nextBtn.addEventListener("click", (e) => {
           TeamName2: `${squad[j].name}`,
           matchCategory: "normal",
           over: false,
+          rematch: true,
         };
       }
     }

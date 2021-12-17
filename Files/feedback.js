@@ -86,7 +86,11 @@ const postBtn = document.querySelector("#postBtn");
 
 postBtn.addEventListener("click", async (e) => {
   e.preventDefault();
-  if (feedName.value == "" || feedMsg.value == "") {
+  if (!feedback[0].thumb || !feedback[0].star) {
+    alert(
+      "Please!! \n Gives us the star and like on behalf of Your Experience"
+    );
+  } else if (feedName.value == "" || feedMsg.value == "") {
     alert("Please!! \n Enter the required fields");
   } else {
     // post the data to the server
@@ -118,14 +122,6 @@ postBtn.addEventListener("click", async (e) => {
     }
   }
   //
-
-  if (!feedback[0].thumb || !feedback[0].star) {
-    alert(
-      "Please!! \n Gives us the star and like on behalf of Your Experience"
-    );
-  }
-  //
-
   //
 });
 // ends here

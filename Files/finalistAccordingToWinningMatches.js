@@ -43,6 +43,10 @@ if (setting[0].tournamentRankingType.byWinningMatches) {
       Data.remainingMatches == 0 &&
       finalPageBtn.innerHTML == "SemiFinalist"
     ) {
+      //
+      Data.matchSquad.map((item) => {
+        item.rematch = false;
+      });
       // function start here
 
       // ensure the semifinalist will be selected
@@ -92,6 +96,9 @@ if (setting[0].tournamentRankingType.byWinningMatches) {
       Data.matchSquad[Data.matchSquad.length - 1].TeamName2 = `${
         Data.matchSquad[Data.matchSquad.length - 2].winnerName
       }`;
+
+      //
+      Data.matchSquad[Data.matchSquad.length - 2].rematch = false;
 
       // set some match again in localStorage
       localStorage.setItem("tournament", JSON.stringify(Data));
@@ -185,6 +192,8 @@ if (setting[0].tournamentRankingType.byWinningMatches) {
       //disable the rematch btn before we go to next page
       // due to this we can preventing the effect like if any one go to tournament page after clicking the fineshed btn and go to the squad page and clicking the rematch btn and
       Data.tournamentOver = true;
+      //
+      Data.matchSquad[Data.matchSquad.length - 1].rematch = false;
 
       // set tournamentOver field in localStorage
       localStorage.setItem("tournament", JSON.stringify(Data));
