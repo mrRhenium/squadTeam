@@ -102,6 +102,15 @@ if (setting[0].tournamentRankingType.byPoints) {
         over: false,
         rematch: true,
       });
+      //
+      //
+      Data.matchSquad.push({
+        TeamName1: `${Data.playersPositionAccordingToPoints[0].name}`,
+        TeamName2: "Soon",
+        matchCategory: "final",
+        over: false,
+        rematch: true,
+      });
 
       // set semi-final match again in localStorage of our browser
       localStorage.setItem("tournament", JSON.stringify(Data));
@@ -118,13 +127,16 @@ if (setting[0].tournamentRankingType.byPoints) {
       Data.remainingMatches--;
 
       // set the final match in matchSquad array
-      Data.matchSquad.push({
-        TeamName1: `${Data.playersPositionAccordingToPoints[0].name}`,
-        TeamName2: `${Data.matchSquad[Data.matchSquad.length - 1].winnerName}`,
-        matchCategory: "final",
-        over: false,
-        rematch: true,
-      });
+      // Data.matchSquad.push({
+      //   TeamName1: `${Data.playersPositionAccordingToPoints[0].name}`,
+      //   TeamName2: `${Data.matchSquad[Data.matchSquad.length - 1].winnerName}`,
+      //   matchCategory: "final",
+      //   over: false,
+      //   rematch: true,
+      // });
+      Data.matchSquad[Data.matchSquad.length - 1].TeamName2 = `${
+        Data.matchSquad[Data.matchSquad.length - 2].winnerName
+      }`;
 
       // set some match again in localStorage
       localStorage.setItem("tournament", JSON.stringify(Data));
@@ -213,7 +225,7 @@ if (setting[0].tournamentRankingType.byPoints) {
 
       // Go to Tournament profile file
       setTimeout(() => {
-        window.location.href = "Files/tournamentHistory.html";
+        window.location.href = "tournamentHistory.html";
       }, 1000);
       // finalPageBtn.setAttribute("href", "tournamentHistory.html");
     } else if (finalPageBtn.innerHTML == "Over") {
@@ -222,7 +234,7 @@ if (setting[0].tournamentRankingType.byPoints) {
 
       // Go to Tournament profile file
       setTimeout(() => {
-        window.location.href = "Files/tournamentHistory.html";
+        window.location.href = "tournamentHistory.html";
       }, 1000);
       // finalPageBtn.setAttribute("href", "tournamentHistory.html");
     } else {

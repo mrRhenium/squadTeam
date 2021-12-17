@@ -121,22 +121,12 @@
   .mobileCover {
     width: 100%;
   }
-  .matchTeamName a,
+  /* .matchTeamName a,
   .matchCategory a {
     font-size: 1.3rem;
   }
   .currentMatchName a {
     font-size: 1.8rem;
-  }
-  /* 
-  .header {
-    height: 8%;
-  }
-  .body {
-    height: 85%;
-  }
-  .footer {
-    height: 7%;
   } */
 }
 @media screen and (max-width: 450px) {
@@ -146,18 +136,19 @@
   .tntProfItems {
     width: 80%;
   }
+  /*
   textarea {
     font-size: 1rem;
-  }
+  } */
   .logoHeader img {
     height: 55%;
   }
   .imgHeader img {
     height: 65%;
   }
-  .tournamentProfileHeading a {
+  /* .tournamentProfileHeading a {
     font-size: 1.5rem;
-  }
+  }*/
   .tntProfItems a {
     font-size: 1rem;
   }
@@ -167,18 +158,18 @@
   }
 }
 @media screen and (max-width: 400px) {
-  .headingBody a {
+  /* .headingBody a {
     font-size: 1.9rem;
-  }
+  }*/
   .tournamentProfileList {
     width: 90%;
-  }
+  } /*
   .elementHeading a {
     font-size: 1.2rem;
   }
   .element label {
     font-size: 1rem;
-  }
+  } */
   .logoHeader img {
     width: 55%;
   }
@@ -194,7 +185,7 @@
   .navigator ul li {
     margin: 0 1.2rem;
   }
-  .siteNameHeader a {
+  /* .siteNameHeader a {
     font-size: 1rem;
   }
   .siteNameHeader #C {
@@ -206,10 +197,10 @@
   }
   .currentMatchName a {
     font-size: 1.5rem;
-  }
+  } */
 }
 @media screen and (max-width: 360px) {
-  .elementHeading a {
+  /* .elementHeading a {
     font-size: 1rem;
   }
   .element label {
@@ -231,10 +222,10 @@
   }
   .tournamentProfileHeading a {
     font-size: 1.2rem;
-  }
+  } */
 }
 @media screen and (max-width: 340px) {
-  .settingHeader a {
+  /* .settingHeader a {
     font-size: 1.5rem;
   }
   .headingBody a {
@@ -245,10 +236,10 @@
   }
   .elementHeading a {
     font-size: 0.9rem;
-  }
+  } 
   .element label {
     font-size: 0.7rem;
-  }
+  }*/
   .logoHeader img {
     width: 60%;
     height: 50%;
@@ -263,7 +254,7 @@
   .navigator ul li {
     margin: 0 1rem;
   }
-  .siteNameHeader a {
+  /* .siteNameHeader a {
     font-size: 0.8rem;
   }
   .siteNameHeader #C {
@@ -271,15 +262,15 @@
   }
   .matchHeading a {
     font-size: 1.5rem !important;
-  }
+  } */
 }
 @media screen and (max-width: 290px) {
-  .elementHeading a {
+  /* .elementHeading a {
     font-size: 0.7rem;
   }
   .element label {
     font-size: 0.7rem;
-  }
+  } */
   .logoHeader img {
     height: 45%;
   }

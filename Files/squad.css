@@ -129,6 +129,9 @@
   overflow: hidden;
   white-space: nowrap;
 }
+.matchCategory a {
+  text-shadow: 0 0 2px black;
+}
 
 .rematchBtn {
   position: absolute;

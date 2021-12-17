@@ -23,7 +23,6 @@ matchSquad.map((item, index) => {
   </div>
   </div>
   </div>`;
-
   matchContent.insertAdjacentHTML("beforeend", records);
 });
 
@@ -65,9 +64,11 @@ for (var i = 0; i < matchSquad.length; i++) {
   } else if (!matchSquad[i].over) {
     // we set the start btn functionality that is after clicking the startBtn we redirecting to the currentMatch html page only on that btn which just after over match then we break the loop to avoid other sibling start Btn
     startBtn[i].onclick = () => {
-      setTimeout(() => {
-        window.location.href = `currentMatch.html`;
-      }, 1000);
+      if (Data.matchSquad[i].TeamName2 != "Soon") {
+        setTimeout(() => {
+          window.location.href = `currentMatch.html`;
+        }, 1000);
+      }
       console.log(i + "start btn is clicked");
       // startBtn[i].setAttribute("href", "currentMatch.html");
     };
