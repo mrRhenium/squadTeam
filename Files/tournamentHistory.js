@@ -1,16 +1,17 @@
-// Get the json file from the local storage
+// fetch the tournament Record form the loacal storage to display in page
+// it will also show the tournament type like by points and by won matches
+//
+
+//
+// Get the json file from the local storage of the our browser
 let tournamentList = localStorage.getItem("tournamentHistory");
 tournamentList = JSON.parse(tournamentList);
 console.log(tournamentList);
+//
 
 //
-// let setting = localStorage.getItem("Setting");
-// setting = JSON.parse(setting);
-// console.log(setting);
-
-// fetch the tournament Record form the loacal storage to display in page
-
 // set the no of list which is listed in local storage
+// we targetint the tournament profile div for storing the tournament records
 const tournamentProfileBody = document.querySelector(".tournamentProfileBody");
 tournamentList.map((item) => {
   tournamentProfileBody.innerHTML += `<div class="tournamentProfileList">
@@ -25,6 +26,7 @@ tournamentList.map((item) => {
 });
 
 // set profile of player which is played on the day which is mentioned
+// and also set the tournament type which is selected by the user
 const tournamentProfileList = document.querySelectorAll(
   ".tournamentProfileList"
 );
@@ -44,7 +46,10 @@ for (var i = 0; i < tournamentList.length; i++) {
     }
   });
 }
+//end here
+//
 
+//
 // adding speaking btn in all profile list for assitant
 for (var i = 0; i < tournamentProfileList.length; i++) {
   let speakbox = `<span
@@ -53,7 +58,6 @@ for (var i = 0; i < tournamentProfileList.length; i++) {
   id="speakingBtn"
   ><a style="margin: 0; transform: translateX(0)">Speak</a>
   </span>`;
-
   tournamentProfileList[i].insertAdjacentHTML("beforeend", speakbox);
 }
 // ends here
@@ -118,3 +122,5 @@ for (let i = 0; i < tournamentList.length; i++) {
     // }
   });
 }
+
+// end of the script

@@ -1,48 +1,41 @@
+// to set the all functionality related to the footer div like..
+// this page is fully work on the navigation functionality of the application
+
+// fetch the tournament record from the localstorage
 let DataForIndex = localStorage.getItem("tournament");
 DataForIndex = JSON.parse(DataForIndex);
 // console.log(DataForIndex);
 
+//
+// we targeting the footer item like icons for navigation functionality
 const list = document.querySelectorAll(".list");
 const indicator = document.querySelector(".indicator");
-
+// this function is only for UI/UX
 function activeClass(e) {
   e.preventDefault();
   list.forEach((item) => {
     item.classList.remove("active");
     this.classList.add("active");
   });
-
-  //   if (/home/.test(this.classList.value)) {
-  //     // indicator.style.transform = "translate(55%, -50%)";
-  //     console.log("hello");
-  //   } else if (/List/.test(this.classList.value)) {
-  //     indicator.style.transform = "translate(257%, -50%)";
-  //     console.log("list");
-  //   } else if (/profile/.test(this.classList.value)) {
-  //     indicator.style.transform = "translate(458%, -50%)";
-  //     console.log("profile");
-  //   } else if (/history/.test(this.classList.value)) {
-  //     indicator.style.transform = "translate(664%, -50%)";
-  //     console.log("history");
-  //   }
 }
-
 list.forEach((item) => {
   item.addEventListener("click", activeClass);
 });
+// functionality ends here
+//
 
-// its stop the calling of that
-// if (
-//   /index.html/.test(window.location.href) ||
-//   /Files\?squad.html/.test(window.location.href) ||
-//   /Files\?tournamentHisory.html/.test(window.location.href)
-// ) {
+//
+// namkaran starts here
+// we targeting the home,list,profle,history icon
 const homeBtnFooter = document.querySelector("#homeBtnFooter");
 const listBtnFooter = document.querySelector("#listBtnFooter");
 const profileBtnFooter = document.querySelector("#profileBtnFooter");
 const historyBtnFooter = document.querySelector("#historyBtnFooter");
-// const settingBtnFooter = document.querySelector("#settingBtnFooter");
+// ends here
+//
 
+//
+// navigation functionality defines here
 homeBtnFooter.addEventListener("click", (e) => {
   e.preventDefault();
   setTimeout(() => {
@@ -74,7 +67,7 @@ listBtnFooter.addEventListener("click", () => {
         window.location.href = "Files/squad.html";
       } else {
         alert(
-          "Please !! \n Firstly Fill required info. in Input boxes \n Then click Next Button"
+          "Please !! \n Firstly Fill required info. in Input boxes of home page \n Then click Next Button"
         );
       }
     }
@@ -104,3 +97,6 @@ settingBtnFooter.addEventListener("click", () => {
     }
   }, 1500);
 });
+// ends here
+
+// ends of the script

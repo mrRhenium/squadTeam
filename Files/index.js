@@ -262,3 +262,6 @@ nextBtn.addEventListener("click", (e) => {
     alert("Please !! Take the required Procesure");
   }
 });
+// ends here
+
+// end of the script

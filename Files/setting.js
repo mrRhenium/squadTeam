@@ -1,10 +1,19 @@
+//this file is fully depend upon setting functionality of our application
+// in it we give the options to the users for better experiences
+//
+
+//
 // fetch the setting json file from the localStorage of borwser
 let setting = localStorage.getItem("Setting");
 setting = JSON.parse(setting);
 console.log(setting);
 //
+
+//
+// we targeting the point input and match input (radio button)
 const pointTypeInput = document.querySelector("#pointTypeInput");
 const matchTypeInput = document.querySelector("#matchTypeInput");
+//
 
 // set the input radio field according the the setting file in the local Storage
 if (setting[0].tournamentRankingType.byPoints) {
@@ -16,7 +25,7 @@ if (setting[0].tournamentRankingType.byPoints) {
 }
 //
 
-//change the field type
+//change the field type dynamicly
 pointTypeInput.onclick = () => {
   setting[0].changes = !setting[0].changes;
   console.log("by Points");
@@ -30,10 +39,14 @@ matchTypeInput.onclick = () => {
   setting[0].tournamentRankingType.byWinningMatches = true;
 };
 //
+
+//
 //delete data button
+// we targeting the delete input radio button for deleting functionality
 const deleteYes = document.querySelector("#deleteYes");
 const deleteNo = document.querySelector("#deleteNo");
 deleteYes.onclick = () => {
+  // firslty we make sure by giving confirm box
   if (
     confirm(
       "Are you Sure \n All the Data including Tounament profile will be Deleted from your Account"
@@ -53,12 +66,21 @@ deleteNo.onclick = () => {
   console.log("Yes delete the Data");
 };
 //
+
+//
+// we targetig the save and reset button
 const saveBtn = document.querySelector("#saveBtn");
 const discardBtn = document.querySelector("#discardBtn");
+//
+
+//
 // we redirect the home page without saving anything
 discardBtn.addEventListener("click", () => {
   window.location.href = "../index.html";
 });
+//
+
+//
 // we could save the changes in localStorage
 saveBtn.addEventListener("click", () => {
   if (setting[0].changes) {
@@ -94,3 +116,6 @@ saveBtn.addEventListener("click", () => {
     alert("Please!! Make some changes \n Then Click Save Button");
   }
 });
+// end of the functionality
+
+// end of the script

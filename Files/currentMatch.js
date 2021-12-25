@@ -8,9 +8,9 @@ let setting = localStorage.getItem("Setting");
 setting = JSON.parse(setting);
 console.log(setting);
 
-// we target the points of playerApoint field
+// we target the points of player-A-point field
 const playerAPoints = document.querySelector("#playerAPoints");
-// we target the points of playerBpoint field
+// we target the points of player-B-point field
 const playerBPoints = document.querySelector("#playerBPoints");
 // we target the submit btn in current match
 const submitBtnId = document.querySelector("#submitBtnId");
@@ -238,82 +238,4 @@ submitBtnId.addEventListener("click", () => {
   }
 });
 
-// // update  the currentPositionAccordingToPoints object json file in tournament after every match for
-// let positionAccordingToPoints = [];
-// const findRankAccordingToPoints = () => {
-//   for (var i = 0; i < Data.membersProfile.length; i++) {
-//     let pos = 0;
-//     let currPoints = -Infinity;
-//     Data.membersProfile.map((item, index) => {
-//       if (item.position == "0" && currPoints < item.totalPoints) {
-//         pos = index;
-//         currPoints = item.totalPoints;
-//       }
-//     });
-//     Data.membersProfile[pos].position = "1";
-//     positionAccordingToPoints.push({
-//       rank: positionAccordingToPoints.length,
-//       name: Data.membersProfile[pos].name,
-//       points: Data.membersProfile[pos].totalPoints,
-//       winMatches: Data.membersProfile[pos].winMatches,
-//       loseMatches: Data.membersProfile[pos].loseMatches,
-//     });
-//   }
-// };
-// console.log("According to points" + positionAccordingToPoints);
-
-// // update  the currentPositionAccordingTowinningMatches object json file in tournament after every match for
-// let positionAccordingToWinMatches = [];
-// const findRankAccordingToWinMatches = () => {
-//   for (var i = 0; i < Data.membersProfile.length; i++) {
-//     let pos = 0;
-//     let winningMatches = -1;
-//     Data.membersProfile.map((item, index) => {
-//       if (item.position == "0" && winningMatches < item.winMatches) {
-//         pos = index;
-//         winningMatches = item.winMatches;
-//       }
-//     });
-//     Data.membersProfile[pos].position = "1";
-//     positionAccordingToWinMatches.push({
-//       rank: positionAccordingToWinMatches.length,
-//       name: Data.membersProfile[pos].name,
-//       points: Data.membersProfile[pos].totalPoints,
-//       winMatches: Data.membersProfile[pos].winMatches,
-//       loseMatches: Data.membersProfile[pos].loseMatches,
-//     });
-//   }
-// };
-// console.log("According to win matches" + positionAccordingToWinMatches);
-//
-
-//
-//
-// call positionAccordingToPoints defining function
-// if (
-//   Data.remainingMatches > -1 ||
-//   setting[0].tournamentRankingType.byWinningMatches
-// ) {
-//   findRankAccordingToPoints();
-//   // we updating the player Position object after every match where position is define upper side of the code
-//   Data.playersPositionAccordingToPoints = positionAccordingToPoints;
-//   // updating the player Position which is position field to 0
-//   Data.membersProfile.map((item) => {
-//     item.position = "0";
-//   });
-// }
-// //
-// //
-
-// // call positionAccordingToPoints defining function
-// if (Data.remainingMatches > -1) {
-//   findRankAccordingToWinMatches();
-//   // we updating the player Position object after every match where position is define upper side of the code
-//   Data.playersPositionAccordingToWinMatches = positionAccordingToWinMatches;
-//   // updating the player Position which is position field to 0
-//   Data.membersProfile.map((item) => {
-//     item.position = "0";
-//   });
-// }
-// //
-// //
+// end of the script

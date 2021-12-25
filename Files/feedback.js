@@ -1,8 +1,16 @@
+// this file is fully depend upon the feedback functionality of our applicaions
+// we are taking the first Ux from the user for more improvment in our application
+//
+
+//
 // fetch the feedback josn file from the localStorage if that file is not exit then it make the feedback file
 let feedback = localStorage.getItem("Feedback");
 feedback = JSON.parse(feedback);
 console.log(feedback);
+//
 
+//
+// to save the feedback file in localStorage if it is not exit
 if (!feedback) {
   let feedback = [
     {
@@ -12,7 +20,7 @@ if (!feedback) {
   ];
   localStorage.setItem("Feedback", JSON.stringify(feedback));
 } else {
-  //
+  // if it is exit then show the recent record on the UI
   const likeInput = document.querySelector("#likeIcon");
   const dislikeInput = document.querySelector("#dislikeIcon");
   if (feedback[0].thumb == "like") {
@@ -22,26 +30,32 @@ if (!feedback) {
   }
   //
 }
+// ends here
+//
 
-//start here
+// Namkaran start here
+// we are targeting the footer's icon in our feedback page
 const settingContent = document.querySelector(".settingContent");
 const feedbackSection = document.querySelector(".feedbackSection");
 const feebackBtnFooter = document.querySelector("#feedbackBtnFooter");
 const settingBtnFooter = document.querySelector("#settingBtnFooter");
+//
 
-// open the feedback section with animations
+//
+// open the feedback section with animations of better UI/UX
 feebackBtnFooter.addEventListener("click", () => {
   feedbackSection.classList.add("feedbackSectionActive");
   settingContent.classList.add("settingContentActive");
 });
-
 settingBtnFooter.addEventListener("click", () => {
   feedbackSection.classList.remove("feedbackSectionActive");
   settingContent.classList.remove("settingContentActive");
 });
+//ends here
 //
 
 //
+// storing the 5 star icon in feedstarCover div
 const feedStarCover = document.querySelector(".feedStarCover");
 for (var i = 0; i < 5; i++) {
   feedStarCover.innerHTML += `
@@ -50,8 +64,11 @@ for (var i = 0; i < 5; i++) {
   </label>`;
 }
 // end here
+//
 
-// start here
+//
+// rating functionality defines here
+// we set the rating according to click of the user on star icon
 const star = document.querySelectorAll(".star");
 star.forEach((item, index) => {
   item.onclick = () => {
@@ -64,9 +81,15 @@ star.forEach((item, index) => {
   }
 });
 // end here
+//
 
+//
+// we targeting the like and dislike btn
 const likeBtn = document.querySelector("#likeBtn");
 const dislikeBtn = document.querySelector("#dislikeBtn");
+//
+
+// set the functionality of liking and disliking
 likeBtn.onclick = () => {
   feedback[0].thumb = "like";
   console.log(feedback[0].thumb);
@@ -76,16 +99,29 @@ dislikeBtn.onclick = () => {
   console.log(feedback[0].thumb);
 };
 // ends here
+//
 
-// starts here
-const url =
-  "https://tournamentorganiserfeedback-default-rtdb.firebaseio.com/feedbackData.json";
+//
+// Namkaran starts here
+// we targeting the input and post btn of the feedback section
 const feedName = document.querySelector("#feedName");
 const feedMsg = document.querySelector("#feedMsg");
 const postBtn = document.querySelector("#postBtn");
+//
 
+//
+//
+//we connet our application to the firebase for storing the feedback of the users
+//
+
+// define the url of the firebase application for achievign the fetching functionality
+const url =
+  "https://tournamentorganiserfeedback-default-rtdb.firebaseio.com/feedbackData.json";
+
+// defining the post functionlity in which fetching posting also define in it
 postBtn.addEventListener("click", async (e) => {
   e.preventDefault();
+  // we appliying if else for validations
   if (!feedback[0].thumb || !feedback[0].star) {
     alert(
       "Please!! \n Gives us the star and like on behalf of Your Experience"
@@ -93,7 +129,7 @@ postBtn.addEventListener("click", async (e) => {
   } else if (feedName.value == "" || feedMsg.value == "") {
     alert("Please!! \n Enter the required fields");
   } else {
-    // post the data to the server
+    // post the data to the server by using fetch functionality
     try {
       const feedbackData = await fetch(url, {
         method: "POST",
@@ -106,6 +142,7 @@ postBtn.addEventListener("click", async (e) => {
         }),
       });
 
+      // after submiting the feedback successfully we show the thanks message to the users
       if (feedbackData) {
         alert("Thanks for your Feedback 😍");
         feedName.value = "";
@@ -125,3 +162,5 @@ postBtn.addEventListener("click", async (e) => {
   //
 });
 // ends here
+
+// end of the script

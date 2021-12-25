@@ -1,6 +1,15 @@
+// this file is defines the current position of the player after each and every matches
+//
+
+//
+// Namekaran starts here
+// we targeting the show profile btn and option label
 const showProfileBtn = document.querySelector("#showProfileBtn");
 const optionsLabel = document.querySelector("#optionsLabel");
+//
 
+//
+// show profile functionality defines here in which we changed the heading of this section dynamicly on clicking the show button
 let show = false;
 showProfileBtn.addEventListener("click", () => {
   if (show) {
@@ -9,17 +18,22 @@ showProfileBtn.addEventListener("click", () => {
     optionsLabel.innerHTML = `According to Points`;
   }
 
+  // we targeting the the profile list of player according to the matches and points
   const profileList = document.querySelectorAll(".profileList");
   const profileListWinMatches = document.querySelectorAll(
     ".profileListWinMatches"
   );
+  //
 
+  // toggling on every click hiding the ranking by points and show the ranking by won matches
   for (var i = 0; i < Data.membersProfile.length; i++) {
     profileList[i].classList.toggle("profileListActive");
     profileListWinMatches[i].classList.toggle("profileListWinMatchesActive");
   }
   show = !show;
 });
+// ends here
+//
 
 //animation is done by click on pofile btn
 document.querySelector("#profileBtnFooter").addEventListener("click", () => {
@@ -37,6 +51,7 @@ document.querySelector("#profileBtnFooter").addEventListener("click", () => {
   </div>`);
   });
 
+  // set the ranking according to the won matches
   Data.playersPositionAccordingToWinMatches.map((item) => {
     return (allProfile.innerHTML += `<div class="profileListWinMatches">
   <span><a> Position - ${item.rank + 1}</a></span>
@@ -58,3 +73,6 @@ document.querySelector("#listBtnFooter").addEventListener("click", () => {
     .classList.remove("currentPositionCoverActive");
   document.querySelector(".matchContent").classList.remove("matchContentAcive");
 });
+// ends here
+
+// end of the script

@@ -255,3 +255,6 @@ if (setting[0].tournamentRankingType.byPoints) {
 } else {
   console.log("Ranking is decided by winning Matches");
 }
+// end here
+
+// end of the script

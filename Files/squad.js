@@ -57,7 +57,7 @@ for (var i = 0; i < matchSquad.length; i++) {
     // after match is over we pass the result part of the of the match in content part of the match Boxes instead of start Btn and we also add rematch btn for give the chance for rematch to play again that particular match in series of the tournaments
     matchStartBtn[
       i
-    ].innerHTML = `<i class="fa fa-trophy" aria-hidden="true" style="color:yellow"></i> <a id="matchResult">${matchSquad[i].winnerName} is won by ${matchSquad[i].margin} Points</a>`;
+    ].innerHTML = `<i class="fa fa-trophy" aria-hidden="true" style="color:yellow"></i> <a id="matchResult">${matchSquad[i].winnerName} won by ${matchSquad[i].margin} Points</a>`;
     // console.log("add");
 
     //
@@ -77,8 +77,8 @@ for (var i = 0; i < matchSquad.length; i++) {
 }
 // function ends here
 //
-//
 
+//
 // we targeting the rematch btn in content part of the match Boxes div
 const rematch = document.querySelectorAll("#rematch");
 // we define the rematch function through it we can organise the match again
@@ -135,7 +135,7 @@ rematch.forEach((item, index) => {
 // rematch functionality ends here
 
 //
-// disable rematch functionality after selection of semi and finalist
+// disabling the rematch functionality after selection of semi and finalist
 const rematchBtn = document.querySelectorAll(".rematchBtn");
 if (Data.remainingMatches < 0) {
   for (let i = 0; i < Data.matchSquad.length; i++) {
@@ -143,12 +143,6 @@ if (Data.remainingMatches < 0) {
       rematchBtn[i].classList.add("rematchDisable");
     }
   }
-  // for (let i = 0; i < Data.matchSquad.length; i++) {
-  //   if (i != Data.matchSquad.length - 1 || Data.tournamentOver) {
-  //     if (Data.matchSquad[i].over) {
-  //       rematchBtn[i].classList.add("rematchDisable");
-  //       // console.log(i + " this one " + Data.matchSquad[i].over);
-  //     }
-  //   }
-  // }
 }
+
+// ended the of the script
