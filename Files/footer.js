@@ -56,6 +56,10 @@ listBtnFooter.addEventListener("click", () => {
       if (DataForIndex) {
         window.location.href = "squad.html";
       } else {
+        //
+        list[1].classList.remove("active");
+        list[2].classList.add("active");
+        //
         alert(
           "Please !! \n Firstly Fill required info. in Input boxes \n Then click Next Button"
         );
@@ -66,6 +70,10 @@ listBtnFooter.addEventListener("click", () => {
       if (DataForIndex) {
         window.location.href = "Files/squad.html";
       } else {
+        //
+        list[1].classList.remove("active");
+        list[0].classList.add("active");
+        //
         alert(
           "Please !! \n Firstly Fill required info. in Input boxes of home page \n Then click Next Button"
         );

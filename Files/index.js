@@ -160,7 +160,7 @@ addTeam.addEventListener("click", (e) => {
       };
 
       // display in header part for ensuring that how much player have added in array for tournament
-      addPlayer.innerHTML = `Add Player (${squad.length})`;
+      addPlayer.innerHTML = `Added Player (${squad.length})`;
     }
 
     // disable the add field after add all players added for the tournament
